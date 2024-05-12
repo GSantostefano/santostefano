@@ -12,7 +12,7 @@ function App() {
       <div className="card">
         
         <p>
-          Developer
+          Developer 
         </p>
       </div>
       <p className="read-the-docs">
