@@ -1,0 +1,22 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+
+
+body{
+  background-color: #0f0f0f;
+  color: rgb(114, 114, 114);
+}
+
+/* Si tienes otras variantes como Bold, Thin, etc., también las defines de la misma manera */
+body {
+
+  font-family: 'robot', sans-serif;
+}
+
+@font-face {
+ font-family: 'robot';
+ src: url('./font2.ttf') format('woff2');
+}
