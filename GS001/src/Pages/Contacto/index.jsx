@@ -1,11 +1,11 @@
 import Layout from '../../Components/Layout'
 
-function Home() {
+function Contacto() {
   return (
     <Layout>
-     Home
+      Contacto
     </Layout>
   )
 }
 
-export default Home
+export default Contacto
