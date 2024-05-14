@@ -1,0 +1,23 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+  
+  /* Si tienes otras variantes como Bold, Thin, etc., también las defines de la misma manera */
+  body {
+    font-family: 'robot', sans-serif;
+    
+  }
+  
+  @font-face {
+   font-family: 'robot';
+   src: url('./Components/Fonts/JMH Typewriter-Bold.otf') format('woff2');
+  }
+
+@font-face {
+  font-family: 'Geist Sans';
+  src: url('src/assets/fonts/GeistVariableVF.woff2') format('woff2');
+  font-style: normal;
+  font-weight: 100 900;
+}
