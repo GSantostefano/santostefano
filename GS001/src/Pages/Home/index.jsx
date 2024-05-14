@@ -5,7 +5,6 @@ function Home() {
 
     <Layout>
      Home
-     <Card/>
     </Layout>
   
   )
