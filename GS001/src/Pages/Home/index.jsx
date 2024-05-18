@@ -1,12 +1,15 @@
+
 import Layout from '../../Components/Layout'
-import Card from '../../Components/Card';
+import SideNav from '../../Components/SideNav/SideNav'
+
 function Home() {
   return (
-
+<div>
     <Layout>
-     Home
+      <SideNav/>
     </Layout>
-  
+    
+    </div>
   )
 }
 

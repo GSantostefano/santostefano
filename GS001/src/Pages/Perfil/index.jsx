@@ -1,14 +1,11 @@
-
 import Layout from '../../Components/Layout'
 
-function Contacto() {
+function Perfil() {
   return (
-<div>
     <Layout>
+      Perfil
     </Layout>
-    
-    </div>
   )
 }
 
-export default Contacto
+export default Perfil

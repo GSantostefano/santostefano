@@ -1,30 +1,38 @@
-
-import { useRoutes,BrowserRouter, Route } from 'react-router-dom';
+import { useRoutes, BrowserRouter } from 'react-router-dom';
 import Home from '../Home/index';
 import AboutMe from '../AboutMe';
 import Contacto from '../Contacto';
 import NotFound from '../NotFound';
 import Productos from '../Productos';
 import NavBar from '../../Components/Navbar';
+import Perfil from '../Perfil';
+import Footer from '../../Components/Footer';
 
 const AppRoutes = () => {
-let routes = useRoutes([
-  {path: '/', element: <Home/>},
-  {path: '/aboutme', element: <AboutMe/>},
-  {path: '/contacto', element: <Contacto/>},
-  {path: '/productos', element: <Productos/>},
-  {path: '/*', element: <NotFound/>},
-])
-return routes
-}
+  let routes = useRoutes([
+    { path: '/', element: <Home /> },
+    { path: '/aboutme', element: <AboutMe /> },
+    { path: '/contacto', element: <Contacto /> },
+    { path: '/productos', element: <Productos /> },
+    { path: '/perfil', element: <Perfil /> },
+    { path: '/*', element: <NotFound /> },
+  ]);
+  return routes;
+};
 
-const  App = () => {
+const App = () => {
   return (
-<BrowserRouter>
-<NavBar/>
-<AppRoutes/>
-</BrowserRouter>
-  )
-}
+    <BrowserRouter>
+      <div className="flex flex-col min-h-screen">
+        <NavBar />
+        <main className="flex-grow">
+          <AppRoutes />
+          
+        </main>
+        <Footer />
+      </div>
+    </BrowserRouter>
+  );
+};
 
-export default App
+export default App;
