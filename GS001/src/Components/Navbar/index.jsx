@@ -10,7 +10,7 @@ const NavBar = () => {
           <NavLink
             to="/"
           >
-            G.S
+          R3C01L
           </NavLink>
         </li>
         <li>
@@ -49,7 +49,7 @@ const NavBar = () => {
             className={({ isActive }) => 
                 `relative  duration-50 transform transition-transform ${isActive ? activeStyle : "hover:text-red-600 hover:scale-105 hover:after:scale-x-100 after:scale-x-0 after:transition-transform after:duration-300 after:ease-in-out after:absolute after:bottom-0 after:left-0 after:w-full after:h-0.5 after:bg-red-600"}`}
             >
-            Mis Cosas
+            Mi perfil
           </NavLink>
         </li>
 

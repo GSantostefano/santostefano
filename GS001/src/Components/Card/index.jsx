@@ -1,6 +1,6 @@
 
 
-const Card = (data) => {
+const Componente = () => {
 
 
   return (
@@ -51,4 +51,4 @@ className='bg-black/30 ml-5 cursor-pointer w-56 h-60 rounded-lg hover:bg-white/1
   )
 }
 
-export default Card
+export default Componente
