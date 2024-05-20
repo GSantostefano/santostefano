@@ -54,7 +54,16 @@ const Sidenav = ({ visibleComponent, onClick }) => {
             >
               {visibleComponent === 'Icm' ? 'ICM' : 'ICM'}
             </button>
+            </li>
+            <li>
+            <button
+              className={`relative transition-colors duration-300 transform transition-transform ${visibleComponent === 'Maths' ? activeStyle : "hover:text-red-600 hover:scale-105 hover:after:scale-x-100 after:scale-x-0 after:transition-transform after:duration-300 after:ease-in-out after:absolute after:bottom-0 after:left-0 after:w-full after:h-0.5 after:bg-red-600"}`}
+              onClick={() => onClick('Maths')}
+            >
+              {visibleComponent === 'Maths' ? 'Maths' : 'Maths'}
+            </button>
           </li>
+            
         </ul>
       </div>
     </div>

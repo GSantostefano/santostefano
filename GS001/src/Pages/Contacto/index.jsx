@@ -5,6 +5,7 @@ function Contacto() {
   return (
 <div>
     <Layout>
+      BTC Donate!
     </Layout>
     
     </div>

@@ -6,7 +6,7 @@ import Preflop from '../../Components/Etapas/Preflop';
 import Flop from '../../Components/Etapas/Flop';
 import Turn from '../../Components/Etapas/Turn';
 import River from '../../Components/Etapas/River';
-
+import Maths from '../../Components/Componente/Maths';
 
 function Home() {
   const [visibleComponent, setVisibleComponent] = useState('');
@@ -19,12 +19,12 @@ function Home() {
     <div>
       <Layout>
         <SideNav visibleComponent={visibleComponent} onClick={handleClick} />
-        <div>
+        <div className='flex flex-col items-center text-pretty ml-44 text-neutral-300 w-8/12'>
           {visibleComponent === 'Preflop' && <Preflop />}
           {visibleComponent === 'Flop' && <Flop />}
           {visibleComponent === 'Turn' && <Turn />}
           {visibleComponent === 'River' && <River />}
-
+          {visibleComponent === 'Maths' && <Maths />}
         </div>
       </Layout>
     </div>
