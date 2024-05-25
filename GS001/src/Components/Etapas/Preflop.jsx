@@ -1,4 +1,3 @@
-
 import { useState, useRef, useEffect } from 'react';
 import './Preflop.css';
 
@@ -25,13 +24,25 @@ const Preflop = () => {
   }, []);
 
   const toggleCardSelection = (card) => {
-    setSelectedCards(prevSelected =>
-      prevSelected.includes(card)
-        ? prevSelected.filter(c => c !== card)
-        : [...prevSelected, card]
-    );
+    // Si la carta seleccionada ya está en las cartas seleccionadas, la deseleccionamos
+    if (selectedCards.includes(card)) {
+      setSelectedCards(prevSelected => prevSelected.filter(c => c !== card));
+      return;
+    }
+  
+    // Si ya hay 2 cartas seleccionadas, eliminamos la primera antes de agregar la nueva carta
+    if (selectedCards.length === 2) {
+      const newSelectedCards = [...selectedCards.slice(1), card];
+      setSelectedCards(newSelectedCards);
+    } else {
+      setSelectedCards(prevSelected =>
+        prevSelected.includes(card)
+          ? prevSelected.filter(c => c !== card)
+          : [...prevSelected, card]
+      );
+    }
   };
-
+  
   const handleMouseDown = () => {
     setIsMouseDown(true);
   };
@@ -55,6 +66,11 @@ const Preflop = () => {
   const isCardSelected = (card) => selectedCards.includes(card);
   const isPositionSelected = (position) => position === selectedPosition;
 
+  const handleClearSelection = () => {
+    setSelectedCards([]);
+    setSelectedPosition(null);
+  };
+
   const generateTable = () => {
     const table = [];
     for (let i = 0; i < suits.length; i++) {
@@ -76,8 +92,10 @@ const Preflop = () => {
         );
       }
       table.push(<tr key={suit}>{row}</tr>);
-    };  return table;
+    }
+    return table;
   };
+
   const getSuitColor = (suit) => {
     switch (suit) {
       case '♥':
@@ -92,6 +110,7 @@ const Preflop = () => {
         return '';
     }
   };
+
   return (
     <div id="poker-range-selector">
       <div id="positions-selector">
@@ -118,10 +137,10 @@ const Preflop = () => {
             <li key={card} className={`${getSuitColor(card.charAt(card.length - 1))} p-1 m-1 rounded-md`}>{card}</li>
           ))}
         </ul>
-
+        <button onClick={handleClearSelection} className="bg-red-600 text-white px-4 py-2 mt-4 rounded-md">Clear</button>
       </div>
     </div>
   );
 };
 
-  export default Preflop;
+export default Preflop;
