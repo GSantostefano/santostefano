@@ -1,6 +1,5 @@
 #poker-table {
   border-collapse: collapse;
-  margin: 20px auto;
   user-select: none; /* Evitar la selección de texto */
   border-radius: 50%;
 }

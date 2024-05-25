@@ -20,7 +20,7 @@ function Home() {
     <div>
       <Layout>
         <SideNav visibleComponent={visibleComponent} onClick={handleClick} />
-        <div className='flex flex-col items-center text-pretty ml-44 text-neutral-300 w-8/12'>
+        <div className='flex flex-col items-center text-pretty fixed text-neutral-300 w-8/12'>
           {visibleComponent === 'Preflop' && <Preflop />}
           {visibleComponent === 'Flop' && <Flop />}
           {visibleComponent === 'Turn' && <Turn />}

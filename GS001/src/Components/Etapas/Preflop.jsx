@@ -112,13 +112,15 @@ const Preflop = () => {
   };
 
   return (
-    <div id="poker-range-selector">
-      <div id="positions-selector">
+    <div className=''>
+       <button onClick={handleClearSelection} className="bg-red-600 text-white px-4 py-2 mt-4 rounded-md">Clear</button>
+      <div className='mt-2' >
+     
         <h2>Seleccionar Posicion:</h2>
-        <div className='flex flex-row p-2 text-5xl gap-3  text-yellow-300'>
+        <div className=' mt-2 flex flex-row  gap-1 text-red-600'>
           {positions.map(position => (
             <div
-              className={` cursor-pointer position ${isPositionSelected(position) ? 'selected ' : 'text-red-600'}`}
+              className={`border-2 pl-1 pr-1 rounded-lg cursor-pointer hover:text-yellow-300 hover:bg-red-600 position ${isPositionSelected(position) ? 'selected ' : 'text-white'}`}
               key={position}
               onClick={() => handlePositionClick(position)}
             >
@@ -127,17 +129,33 @@ const Preflop = () => {
           ))}
         </div>
       </div>
-      <table id="poker-table" ref={tableRef}>
+      <table className="m-6" id="poker-table" ref={tableRef}>
         <tbody>{generateTable()}</tbody>
       </table>
-      <div id="selected-items">
-        <h2 >Cartas seleccionadas:</h2>
-        <ul className='flex flex-row text-5xl'>
-          {selectedCards.map(card => (
-            <li key={card} className={`${getSuitColor(card.charAt(card.length - 1))} p-1 m-1 rounded-md`}>{card}</li>
-          ))}
-        </ul>
-        <button onClick={handleClearSelection} className="bg-red-600 text-white px-4 py-2 mt-4 rounded-md">Clear</button>
+      <div >
+        
+  <div className=" text-3xl" >Hero:</div>
+  <div className="flex flex-row items-center text-2xl">
+    {selectedPosition && (
+      <div className="mr-4">{selectedPosition}</div>
+    )}
+    <ul className="flex flex-row w-20">
+      {selectedCards.map(card => (
+        <li key={card} className={`${getSuitColor(card.charAt(card.length - 1))} p-1 m-1 rounded-md`}>{card}</li>
+      ))}
+    </ul>
+    <div className="flex flex-row items-center text-2xl gap-3 p-3">
+  
+  {/* <button onClick={""} className="flex flex-row text-white px-1 border-2 rounded-lg hover:bg-red-600">OR</button><p className='text-green-500'>2.5x</p>
+  <button onClick={""} className="flex flex-row text-white px-1 border-2 rounded-lg hover:bg-red-600">ROL</button><p className='text-green-500'>2.5x + 1xL</p>
+  <button onClick={""} className="flex flex-row text-white px-1 border-2 rounded-lg hover:bg-red-600">3Bet</button><p className='text-yellow-300'>call</p>
+  <button onClick={""} className="flex flex-row text-white px-1 border-2 rounded-lg hover:bg-red-600">4Bet</button><p className='text-red-500'>fold</p>
+   */}
+  </div>
+        </div>
+      </div>
+      <div>
+      <h2 className="text-3xl">Villanos:</h2>
       </div>
     </div>
   );
