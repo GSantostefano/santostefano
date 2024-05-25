@@ -3,6 +3,7 @@ import { useState } from 'react';
 const Maths = () => {
   const [eq, setEq] = useState('');
   const [pot, setPot] = useState('');
+  const [pot1, setPot1] = useState('');
   const [inversion, setInversion] = useState('');
   const [stackEfectivo, setStackEfectivo] = useState('');
   const [resultEv, setResultEv] = useState(null);
@@ -14,7 +15,7 @@ const Maths = () => {
   };
 
   const handleSprCalculation = () => {
-    const spr = parseFloat(stackEfectivo) / parseFloat(pot);
+    const spr = parseFloat(stackEfectivo) / parseFloat(pot1);
     setResultSpr(spr);
   };
 
@@ -22,9 +23,10 @@ const Maths = () => {
     <div className="ml-60 bg-red-900/30 w-full p-4">
       <div>
         <div>Contenido de Maths</div>
+        {/* EV */}
         <div>
-          <p className="underline">Fórmula General de EV</p>
-          <div>
+          <p className="underline mt-5 ">Fórmula General de EV</p>
+          <div className='mt-5'>
             <label>
               EQ:
               <input
@@ -63,9 +65,10 @@ const Maths = () => {
             <p className="mt-2">EV = {resultEv.toFixed(2)}</p>
           )}
         </div>
+        {/* SPR */}
         <div>
-          <p className="underline">Stack to Pot Ratio</p>
-          <div>
+          <p className="underline mt-5">Stack to Pot Ratio</p>
+          <div className='mt-5' >
             <label>
               Stack Efectivo:
               <input
@@ -79,8 +82,8 @@ const Maths = () => {
               Pot:
               <input
                 type="number"
-                value={pot}
-                onChange={(e) => setPot(e.target.value)}
+                value={pot1}
+                onChange={(e) => setPot1(e.target.value)}
                 className="ml-2 p-1 border border-gray-400 rounded text-black"
               />
             </label>
@@ -95,6 +98,8 @@ const Maths = () => {
             <p className="mt-2">SPR = {resultSpr.toFixed(2)}</p>
           )}
         </div>
+        {/* OUTS */}
+
       </div>
     </div>
   );

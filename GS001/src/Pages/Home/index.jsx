@@ -8,6 +8,7 @@ import Turn from '../../Components/Etapas/Turn';
 import River from '../../Components/Etapas/River';
 import Maths from '../../Components/Componente/Maths';
 
+
 function Home() {
   const [visibleComponent, setVisibleComponent] = useState('');
 
@@ -25,7 +26,9 @@ function Home() {
           {visibleComponent === 'Turn' && <Turn />}
           {visibleComponent === 'River' && <River />}
           {visibleComponent === 'Maths' && <Maths />}
+          
         </div>
+       
       </Layout>
     </div>
   );
