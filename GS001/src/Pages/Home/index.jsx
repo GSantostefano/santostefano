@@ -1,4 +1,3 @@
-// src/Pages/Home/index.jsx
 import { useState } from 'react';
 import Layout from '../../Components/Layout';
 import SideNav from '../../Components/SideNav/SideNav';
@@ -8,7 +7,6 @@ import Turn from '../../Components/Etapas/Turn';
 import River from '../../Components/Etapas/River';
 import Maths from '../../Components/Componente/Maths';
 
-
 function Home() {
   const [visibleComponent, setVisibleComponent] = useState('');
 
@@ -17,20 +15,16 @@ function Home() {
   };
 
   return (
-    <div>
-      <Layout>
-        <SideNav visibleComponent={visibleComponent} onClick={handleClick} />
-        <div className='flex flex-col items-center text-pretty fixed text-neutral-300 w-8/12'>
-          {visibleComponent === 'Preflop' && <Preflop />}
-          {visibleComponent === 'Flop' && <Flop />}
-          {visibleComponent === 'Turn' && <Turn />}
-          {visibleComponent === 'River' && <River />}
-          {visibleComponent === 'Maths' && <Maths />}
-          
-        </div>
-       
-      </Layout>
-    </div>
+    <Layout>
+      <SideNav visibleComponent={visibleComponent} onClick={handleClick} />
+      <div className='flex flex-col items-center text-pretty text-neutral-300 w-8/12'>
+        {visibleComponent === 'Preflop' && <Preflop />}
+        {visibleComponent === 'Flop' && <Flop />}
+        {visibleComponent === 'Turn' && <Turn />}
+        {visibleComponent === 'River' && <River />}
+        {visibleComponent === 'Maths' && <Maths />}
+      </div>
+    </Layout>
   );
 }
 
