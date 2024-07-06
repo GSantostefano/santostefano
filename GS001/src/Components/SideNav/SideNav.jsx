@@ -4,13 +4,29 @@ const Sidenav = ({ visibleComponent, onClick }) => {
   return (
     <div className="h-3/4 w-64 fixed left-0 text-white flex items-center flex-col p-4">
       <div>
-        <ul className="flex flex-col items-center mt-10 gap-3">
+        <ul className="flex flex-col items-left mt-10 gap-3">
+        <li>
+            <button
+              className={`relative transition-colors duration-300 transform transition-transform ${visibleComponent === 'MyCalendar' ? activeStyle : "hover:text-red-600 hover:scale-105 hover:after:scale-x-100 after:scale-x-0 after:transition-transform after:duration-300 after:ease-in-out after:absolute after:bottom-0 after:left-0 after:w-full after:h-0.5 after:bg-red-600"}`}
+              onClick={() => onClick('MyCalendar')}
+            >
+              Calendario
+            </button>
+          </li>
           <li>
             <button
-              className={`relative transition-colors duration-300 transform transition-transform ${visibleComponent === 'Preflop' ? activeStyle : "hover:text-red-600 hover:scale-105 hover:after:scale-x-100 after:scale-x-0 after:transition-transform after:duration-300 after:ease-in-out after:absolute after:bottom-0 after:left-0 after:w-full after:h-0.5 after:bg-red-600"}`}
-              onClick={() => onClick('Preflop')}
+              className={`relative transition-colors duration-300 transform transition-transform ${visibleComponent === 'TodoList' ? activeStyle : "hover:text-red-600 hover:scale-105 hover:after:scale-x-100 after:scale-x-0 after:transition-transform after:duration-300 after:ease-in-out after:absolute after:bottom-0 after:left-0 after:w-full after:h-0.5 after:bg-red-600"}`}
+              onClick={() => onClick('TodoList')}
             >
-              PREFLOP
+              TO-DO
+            </button>
+          </li>
+          <li>
+            <button
+              className={`relative transition-colors duration-300 transform transition-transform ${visibleComponent === 'LibroDiario' ? activeStyle : "hover:text-red-600 hover:scale-105 hover:after:scale-x-100 after:scale-x-0 after:transition-transform after:duration-300 after:ease-in-out after:absolute after:bottom-0 after:left-0 after:w-full after:h-0.5 after:bg-red-600"}`}
+              onClick={() => onClick('LibroDiario')}
+            >
+              Libro Diario
             </button>
           </li>
           <li>
@@ -18,7 +34,7 @@ const Sidenav = ({ visibleComponent, onClick }) => {
               className={`relative transition-colors duration-300 transform transition-transform ${visibleComponent === 'Flop' ? activeStyle : "hover:text-red-600 hover:scale-105 hover:after:scale-x-100 after:scale-x-0 after:transition-transform after:duration-300 after:ease-in-out after:absolute after:bottom-0 after:left-0 after:w-full after:h-0.5 after:bg-red-600"}`}
               onClick={() => onClick('Flop')}
             >
-              FLOP
+              Inventario
             </button>
           </li>
           <li>
@@ -26,7 +42,7 @@ const Sidenav = ({ visibleComponent, onClick }) => {
               className={`relative transition-colors duration-300 transform transition-transform ${visibleComponent === 'Turn' ? activeStyle : "hover:text-red-600 hover:scale-105 hover:after:scale-x-100 after:scale-x-0 after:transition-transform after:duration-300 after:ease-in-out after:absolute after:bottom-0 after:left-0 after:w-full after:h-0.5 after:bg-red-600"}`}
               onClick={() => onClick('Turn')}
             >
-              TURN
+              Compras
             </button>
           </li>
           <li>
@@ -34,15 +50,16 @@ const Sidenav = ({ visibleComponent, onClick }) => {
               className={`relative transition-colors duration-300 transform transition-transform ${visibleComponent === 'River' ? activeStyle : "hover:text-red-600 hover:scale-105 hover:after:scale-x-100 after:scale-x-0 after:transition-transform after:duration-300 after:ease-in-out after:absolute after:bottom-0 after:left-0 after:w-full after:h-0.5 after:bg-red-600"}`}
               onClick={() => onClick('River')}
             >
-              RIVER
+              Ventas
             </button>
           </li>
+          
           <li>
             <button
-              className={`relative transition-colors duration-300 transform transition-transform ${visibleComponent === 'Equilab' ? activeStyle : "hover:text-red-600 hover:scale-105 hover:after:scale-x-100 after:scale-x-0 after:transition-transform after:duration-300 after:ease-in-out after:absolute after:bottom-0 after:left-0 after:w-full after:h-0.5 after:bg-red-600"}`}
-              onClick={() => onClick('Equilab')}
+              className={`relative transition-colors duration-300 transform transition-transform ${visibleComponent === 'Icm' ? activeStyle : "hover:text-red-600 hover:scale-105 hover:after:scale-x-100 after:scale-x-0 after:transition-transform after:duration-300 after:ease-in-out after:absolute after:bottom-0 after:left-0 after:w-full after:h-0.5 after:bg-red-600"}`}
+              onClick={() => onClick('Icm')}
             >
-              EQUILAB
+              Inversiones
             </button>
           </li>
           <li>
@@ -50,15 +67,24 @@ const Sidenav = ({ visibleComponent, onClick }) => {
               className={`relative transition-colors duration-300 transform transition-transform ${visibleComponent === 'Icm' ? activeStyle : "hover:text-red-600 hover:scale-105 hover:after:scale-x-100 after:scale-x-0 after:transition-transform after:duration-300 after:ease-in-out after:absolute after:bottom-0 after:left-0 after:w-full after:h-0.5 after:bg-red-600"}`}
               onClick={() => onClick('Icm')}
             >
-              ICM
+              Poker
             </button>
           </li>
           <li>
+  <button
+    className={`relative transition-colors duration-300 transform transition-transform ${visibleComponent === 'Icm' ? activeStyle : "hover:text-red-600 hover:scale-105 hover:after:scale-x-100 after:scale-x-0 after:transition-transform after:duration-300 after:ease-in-out after:absolute after:bottom-0 after:left-0 after:w-full after:h-0.5 after:bg-red-600"}`}
+    onClick={() => window.open('https://es.tradingview.com/chart/VLf3LuWv/', '_blank', 'noopener,noreferrer')}
+  >
+    Trading
+  </button>
+</li>
+
+          <li>
             <button
-              className={`relative transition-colors duration-300 transform transition-transform ${visibleComponent === 'Maths' ? activeStyle : "hover:text-red-600 hover:scale-105 hover:after:scale-x-100 after:scale-x-0 after:transition-transform after:duration-300 after:ease-in-out after:absolute after:bottom-0 after:left-0 after:w-full after:h-0.5 after:bg-red-600"}`}
-              onClick={() => onClick('Maths')}
+              className={`relative transition-colors duration-300 transform transition-transform ${visibleComponent === 'Icm' ? activeStyle : "hover:text-red-600 hover:scale-105 hover:after:scale-x-100 after:scale-x-0 after:transition-transform after:duration-300 after:ease-in-out after:absolute after:bottom-0 after:left-0 after:w-full after:h-0.5 after:bg-red-600"}`}
+              onClick={() => onClick('Icm')}
             >
-              Maths
+              ESPatrimonial
             </button>
           </li>
         </ul>

@@ -3,9 +3,9 @@ import Layout from '../../Components/Layout';
 import SideNav from '../../Components/SideNav/SideNav';
 import Preflop from '../../Components/Etapas/Preflop';
 import Flop from '../../Components/Etapas/Flop';
-import Turn from '../../Components/Etapas/Turn';
-import River from '../../Components/Etapas/River';
-import Maths from '../../Components/Componente/Maths';
+import LibroDiario from '../../Components/Componente/LibroDiario';
+import TodoList from '../../Components/Componente/TodoList';
+import MyCalendar from '../../Components/Componente/MyCalendar';
 
 function Home() {
   const [visibleComponent, setVisibleComponent] = useState('');
@@ -16,13 +16,13 @@ function Home() {
 
   return (
     <Layout>
-      {/* <SideNav visibleComponent={visibleComponent} onClick={handleClick} /> */}
+      <SideNav visibleComponent={visibleComponent} onClick={handleClick} />
       <div className='flex flex-col items-center text-pretty text-neutral-300 w-8/12'>
-        {/* {visibleComponent === 'Preflop' && <Preflop />}
+        {visibleComponent === 'Libro Diario' && <Preflop />}
         {visibleComponent === 'Flop' && <Flop />}
-        {visibleComponent === 'Turn' && <Turn />}
-        {visibleComponent === 'River' && <River />}
-        {visibleComponent === 'Maths' && <Maths />} */}
+        {visibleComponent === 'LibroDiario' && <LibroDiario/>}
+        {visibleComponent === 'TodoList' && <TodoList />}
+        {visibleComponent === 'MyCalendar' && <MyCalendar />}
       </div>
     </Layout>
   );
