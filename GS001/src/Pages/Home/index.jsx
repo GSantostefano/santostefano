@@ -16,13 +16,13 @@ function Home() {
 
   return (
     <Layout>
-      <SideNav visibleComponent={visibleComponent} onClick={handleClick} />
+      {/* <SideNav visibleComponent={visibleComponent} onClick={handleClick} /> */}
       <div className='flex flex-col items-center text-pretty text-neutral-300 w-8/12'>
-        {visibleComponent === 'Preflop' && <Preflop />}
+        {/* {visibleComponent === 'Preflop' && <Preflop />}
         {visibleComponent === 'Flop' && <Flop />}
         {visibleComponent === 'Turn' && <Turn />}
         {visibleComponent === 'River' && <River />}
-        {visibleComponent === 'Maths' && <Maths />}
+        {visibleComponent === 'Maths' && <Maths />} */}
       </div>
     </Layout>
   );
