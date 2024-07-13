@@ -1,6 +1,6 @@
 import { NavLink } from "react-router-dom";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faGithub, faLinkedin, faInstagram } from '@fortawesome/free-brands-svg-icons';
+import { faGithub, faLinkedin, faInstagram, faWhatsapp } from '@fortawesome/free-brands-svg-icons';
 
 const Footer = () => {
   const activeStyle = "text-red-600 underline underline-offset-4";
@@ -20,9 +20,12 @@ const Footer = () => {
         <a href="https://www.instagram.com/gacho.santoss/" target="_blank" rel="noopener noreferrer" className="text-white">
           <FontAwesomeIcon icon={faInstagram} size="2x" />
         </a>
+        <a href="https://wa.me/5493435066052" target="_blank" rel="noopener noreferrer" className="text-white">
+          <FontAwesomeIcon icon={faWhatsapp} size="2x" />
+        </a>
       </div>
       <div>
-        Creado por R3C01L D3V3L0P3R'S 1NC
+        Creado por R3C01L 1NC
       </div>
     </footer>
   );

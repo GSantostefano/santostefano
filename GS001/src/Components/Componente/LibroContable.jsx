@@ -1,11 +1,11 @@
 import { useState } from 'react';
 
-const LibroDiario = () => {
+const LibroContable = () => {
   const [entries, setEntries] = useState([]);
   const [newEntry, setNewEntry] = useState({
     date: '',
     detail: '',
-    transactions: [{ account: '', debit: '', credit: '' }]
+    transactions: [{ account: '', debit: '', credit: '', operationCost: '' }]
   });
 
   const handleChange = (e, index) => {
@@ -18,7 +18,7 @@ const LibroDiario = () => {
   const handleAddTransaction = () => {
     setNewEntry({
       ...newEntry,
-      transactions: [...newEntry.transactions, { account: '', debit: '', credit: '' }]
+      transactions: [...newEntry.transactions, { account: '', debit: '', credit: '', operationCost: '' }]
     });
   };
 
@@ -36,7 +36,7 @@ const LibroDiario = () => {
     setNewEntry({
       date: '',
       detail: '',
-      transactions: [{ account: '', debit: '', credit: '' }]
+      transactions: [{ account: '', debit: '', credit: '', operationCost: '' }]
     });
   };
 
@@ -53,16 +53,16 @@ const LibroDiario = () => {
   };
 
   return (
-    <div className="container mx-auto p-4 ">
-      <h1 className="text-2xl font-bold mb-4">Libro Diario</h1>
-      <div className="mb-4 ">
+    <div className="container mx-auto p-4">
+      <h1 className="text-2xl font-bold mb-4">Libro Contable</h1>
+      <div className="mb-4">
         <input
           type="date"
           name="date"
           value={newEntry.date}
           onChange={handleEntryChange}
           placeholder="Fecha"
-          className="border p-2 mr-2 "
+          className="border p-2 mr-2"
         />
         <input
           type="text"
@@ -70,7 +70,7 @@ const LibroDiario = () => {
           value={newEntry.detail}
           onChange={handleEntryChange}
           placeholder="Detalle"
-          className="border p-2 mr-2 w-full"
+          className="border p-2 mr-2"
         />
         {newEntry.transactions.map((transaction, index) => (
           <div key={index} className="flex items-center mb-2">
@@ -98,50 +98,56 @@ const LibroDiario = () => {
               placeholder="Haber"
               className="border p-2 mr-2"
             />
-            <button onClick={() => handleRemoveTransaction(index)} className="bg-red-500 text-white p-2 ml-2 rounded-md">Eliminar</button>
+            <input
+              type="number"
+              name="operationCost"
+              value={transaction.operationCost}
+              onChange={(e) => handleChange(e, index)}
+              placeholder="Costo de Operación"
+              className="border p-2 mr-2"
+            />
+            <button onClick={() => handleRemoveTransaction(index)} className="bg-red-500 text-white p-2">Eliminar</button>
           </div>
         ))}
-        <button onClick={handleAddTransaction} className="bg-blue-500 text-white p-2 rounded-md mr-2">Añadir Transacción</button>
-        <button onClick={handleAddEntry} className="bg-green-500 text-white p-2 rounded-md mr-2">Registrar</button>
-        <button onClick={handleResetEntry} className="bg-gray-500 text-white p-2 rounded-md">Cancelar</button>
+        <button onClick={handleAddTransaction} className="bg-blue-500 text-white p-2 mr-2">Añadir Transacción</button>
+        <button onClick={handleAddEntry} className="bg-green-500 text-white p-2 mr-2">Agregar Entrada</button>
+        <button onClick={handleResetEntry} className="bg-gray-500 text-white p-2">Cancelar</button>
       </div>
-      <div className="overflow-x-auto mb-4">
-        <table className="table-auto min-w-full border-collapse border border-gray-200">
-          <thead>
-            <tr className="bg-black">
-              <th className="border p-2">Fecha</th>
-              <th className="border p-2">Detalle</th>
-              {/* <th className="border p-2">Cuenta</th> */}
-              <th className="border p-2">Debe</th>
-              <th className="border p-2">Haber</th>
-            </tr>
-          </thead>
-          <tbody>
-            {entries.map(entry => (
-              <React.Fragment key={entry.id}>
-                <tr className="bg-black">
-                  <td className="border p-2">{entry.date}</td>
-                  <td className="border p-2">{entry.detail}</td>
+      <table className="table-auto w-full border-collapse border border-gray-200">
+        <thead>
+          <tr className="bg-gray-100">
+            <th className="border p-2">Fecha</th>
+            <th className="border p-2">Detalle</th>
+            <th className="border p-2">Cuenta</th>
+            <th className="border p-2">Debe</th>
+            <th className="border p-2">Haber</th>
+            <th className="border p-2">Costo de Operación</th>
+          </tr>
+        </thead>
+        <tbody>
+          {entries.map(entry => (
+            <React.Fragment key={entry.id}>
+              <tr>
+                <td className="border p-2">{entry.date}</td>
+                <td className="border p-2">{entry.detail}</td>
+                <td className="border p-2" colSpan="4"></td>
+              </tr>
+              {entry.transactions.map((transaction, index) => (
+                <tr key={index}>
                   <td className="border p-2"></td>
                   <td className="border p-2"></td>
-                  <td className="border p-2"></td>
+                  <td className="border p-2">{transaction.account}</td>
+                  <td className="border p-2">{transaction.debit}</td>
+                  <td className="border p-2">{transaction.credit}</td>
+                  <td className="border p-2">{transaction.operationCost}</td>
                 </tr>
-                {entry.transactions.map((transaction, index) => (
-                  <tr key={index} className="bg-black">
-                    <td className="border p-2"></td>
-                    <td className="border p-2"></td>
-                    <td className="border p-2">{transaction.account}</td>
-                    <td className="border p-2">{transaction.debit}</td>
-                    <td className="border p-2">{transaction.credit}</td>
-                  </tr>
-                ))}
-              </React.Fragment>
-            ))}
-          </tbody>
-        </table>
-      </div>
+              ))}
+            </React.Fragment>
+          ))}
+        </tbody>
+      </table>
     </div>
   );
 };
 
-export default LibroDiario;
+export default LibroContable;
