@@ -7,5 +7,6 @@ export default defineConfig({
   esbuild: {
     jsxFactory: 'React.createElement',
     jsxInject: `import React from 'react'`
-  }
+  },
+  assetsInclude: ["**/*.jpg", "**/*.JPG"], // Asegura que los archivos .jpg y .JPG sean tratados como recursos estáticos
 })
