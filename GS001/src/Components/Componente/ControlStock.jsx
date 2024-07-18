@@ -52,7 +52,7 @@ const ControlStock = () => {
   return (
     <div className="container mx-auto p-4">
       <h1 className="text-2xl font-bold mb-4">Control de Stock</h1>
-      <div className="mb-4 grid w-4/12">
+      <div className="mb-4 grid w-4/12 gap-4">
         <input
           type="text"
           name="nombre"

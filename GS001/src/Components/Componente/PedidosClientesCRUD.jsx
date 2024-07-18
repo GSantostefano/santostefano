@@ -55,7 +55,7 @@ const PedidosClientesCRUD = () => {
   return (
     <div className="container mx-auto p-4">
       <h1 className="text-2xl font-bold mb-4">Administrador de Pedidos de Clientes</h1>
-      <div className="mb-4 grid w-4/12">
+      <div className="mb-4 grid w-4/12 gap-4">
         <input
           type="text"
           name="cliente"
