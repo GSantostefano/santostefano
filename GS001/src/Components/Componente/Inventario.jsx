@@ -71,7 +71,7 @@ const Inventario = () => {
   return (
     <div className="container text-black mx-auto p-4">
       <h1 className="text-2xl font-bold mb-4">Inventario</h1>
-      <div className="mb-4">
+      <div className="mb-4 grid grid-cols-2 w-12/12">
         <input
           type="text"
           name="nombre"
