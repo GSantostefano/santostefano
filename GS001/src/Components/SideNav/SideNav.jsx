@@ -17,7 +17,7 @@ const Sidenav = ({ visibleComponent, onClick }) => {
             Cuentas
             </button>
           </li>
-          <li>
+          {/* <li>
             <button
               className={`relative transition-colors duration-300 transform transition-transform ${
                 visibleComponent === "LibroDiario"
@@ -28,7 +28,7 @@ const Sidenav = ({ visibleComponent, onClick }) => {
             >
               Libro Diario
             </button>
-          </li>
+          </li> */}
           <li>
             <button
               className={`relative transition-colors duration-300 transform transition-transform ${
