@@ -40,7 +40,7 @@ function Contacto() {
     <Layout >
       <div className="flex justify-center items-center h-full " >
       <div className=" min-w-96 max-w-7xl mx-auto px-4 py-8 ">
-        <h1 className="text-3xl font-bold mb-6">Contacto</h1>
+        <h1 className="text-3xl text-black font-bold mb-6">Contacto</h1>
         <form onSubmit={handleSubmit} className="space-y-4">
           <div>
             <label htmlFor="name" className="block text-sm font-medium text-red-700">Nombre:</label>

@@ -1,14 +1,19 @@
 import { useState } from 'react';
 import Layout from '../../Components/Layout';
 import SideNav from '../../Components/SideNav/SideNav';
-import TransactionLog from '../../Components/Componente/TransactionLog';
+import ControlStock from '../../Components/Componente/ControlStock';
 import LibroDiario from '../../Components/Componente/LibroDiario';
-import TodoList from '../../Components/Componente/TodoList';
-import MyCalendar from '../../Components/Componente/MyCalendar';
+import ProveedoresCRUD from '../../Components/Componente/ProveedoresCRUD';
+import Inventario from '../../Components/Componente/Inventario';
 
-import LibroContable from '../../Components/Componente/LibroContable';
-import InversionesActivosIntangibles from '../../Components/Componente/InversionesActivosIntangibles';
+import ClientesCRUD from '../../Components/Componente/ClientesCRUD';
+import PedidosClientesCRUD from '../../Components/Componente/PedidosClientesCRUD';
 import CuentasCRUD from '../../Components/Componente/CuentasCRUD';
+import LibroDiarioMayor from '../../Components/Componente/LibroDiarioMayor';
+import GestionCompras from '../../Components/Componente/GestionCompras';
+// import 456CuentasCRUD from '../../Components/Componente/456CuentasCRUD';
+// import 678CuentasCRUD from '../../Components/Componente/678CuentasCRUD';
+// import 90CuentasCRUD from '../../Components/Componente/90CuentasCRUD';
 function Home() {
   const [visibleComponent, setVisibleComponent] = useState('');
 
@@ -19,16 +24,22 @@ function Home() {
   return (
     <Layout>
       <SideNav visibleComponent={visibleComponent} onClick={handleClick} />
-      <div className='flex flex-col items-center text-pretty text-neutral-300 w-8/12'>
+      <div className='flex flex-col items-center text-pretty text-black w-8/12'>
         {visibleComponent === 'Libro Diario' && <Preflop />}
-        {visibleComponent === 'TransactionLog' && <TransactionLog />}
+        {visibleComponent === 'ControlStock' && <ControlStock />}
         {visibleComponent === 'LibroDiario' && <LibroDiario/>}
-        {visibleComponent === 'TodoList' && <TodoList />}
-        {visibleComponent === 'MyCalendar' && <MyCalendar />}
-        {visibleComponent === 'InversionesActivosIntangibles' && <InversionesActivosIntangibles />}
-        {visibleComponent === 'LibroContable.jsx' && <LibroContable />}
+        {visibleComponent === 'LibroDiarioMayor' && <LibroDiarioMayor />}
+        {visibleComponent === 'ProveedoresCRUD' && <ProveedoresCRUD />}
+        {visibleComponent === 'Inventario' && <Inventario />}
+        {visibleComponent === 'PedidosClientesCRUD' && <PedidosClientesCRUD />}
+        {visibleComponent === 'ClientesCRUD.jsx' && <ClientesCRUD />}
         {visibleComponent === 'CuentasCRUD' && <CuentasCRUD />}
         
+        
+         {visibleComponent === 'GestionCompras' && <GestionCompras />}
+       {/* {visibleComponent === '456CuentasCRUD' && <456CuentasCRUD />}
+        {visibleComponent === '678CuentasCRUD' && <67890CuentasCRUD />}
+        {visibleComponent === '90CuentasCRUD' && <90CuentasCRUD />} */}
       </div>
     </Layout>
   );

@@ -53,7 +53,7 @@ const LibroDiario = () => {
   };
 
   return (
-    <div className="container mx-auto p-4 ">
+    <div className="container  mx-auto p-4 ">
       <h1 className="text-2xl font-bold mb-4">Libro Diario</h1>
       <div className="mb-4 ">
         <input
@@ -108,7 +108,7 @@ const LibroDiario = () => {
       <div className="overflow-x-auto mb-4">
         <table className="table-auto min-w-full border-collapse border border-gray-200">
           <thead>
-            <tr className="bg-black">
+            <tr className="text-white bg-black">
               <th className="border p-2">Fecha</th>
               <th className="border p-2">Detalle</th>
               {/* <th className="border p-2">Cuenta</th> */}

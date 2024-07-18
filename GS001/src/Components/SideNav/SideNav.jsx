@@ -2,7 +2,7 @@ const Sidenav = ({ visibleComponent, onClick }) => {
   const activeStyle = "text-red-600 underline underline-offset-4";
 
   return (
-    <div className="h-3/4 w-64  fixed left-0 text-white flex items-center flex-col p-4">
+    <div className="h-3/4 w-64  fixed left-0 text-black flex items-center flex-col p-4">
       <div>
         <ul className="flex flex-col items-left mt-10 gap-3">
         <li>
@@ -29,85 +29,98 @@ const Sidenav = ({ visibleComponent, onClick }) => {
               Libro Diario
             </button>
           </li>
-          {/* <li>
+          <li>
             <button
               className={`relative transition-colors duration-300 transform transition-transform ${
-                visibleComponent === "MyCalendar"
+                visibleComponent === "LibroDiarioMayor"
                   ? activeStyle
                   : "hover:text-red-600 hover:scale-105 hover:after:scale-x-100 after:scale-x-0 after:transition-transform after:duration-300 after:ease-in-out after:absolute after:bottom-0 after:left-0 after:w-full after:h-0.5 after:bg-red-600"
               }`}
-              onClick={() => onClick("MyCalendar")}
+              onClick={() => onClick("LibroDiarioMayor")}
             >
-              Calendario
+              LibroDiarioMayor
+            </button>
+          </li>
+           <li>
+            <button
+              className={`relative transition-colors duration-300 transform transition-transform ${
+                visibleComponent === "Inventario"
+                  ? activeStyle
+                  : "hover:text-red-600 hover:scale-105 hover:after:scale-x-100 after:scale-x-0 after:transition-transform after:duration-300 after:ease-in-out after:absolute after:bottom-0 after:left-0 after:w-full after:h-0.5 after:bg-red-600"
+              }`}
+              onClick={() => onClick("Inventario")}
+            >
+              Inventario
             </button>
           </li>
           <li>
             <button
               className={`relative transition-colors duration-300 transform transition-transform ${
-                visibleComponent === "TodoList"
+                visibleComponent === "ProveedoresCRUD"
                   ? activeStyle
                   : "hover:text-red-600 hover:scale-105 hover:after:scale-x-100 after:scale-x-0 after:transition-transform after:duration-300 after:ease-in-out after:absolute after:bottom-0 after:left-0 after:w-full after:h-0.5 after:bg-red-600"
               }`}
-              onClick={() => onClick("TodoList")}
+              onClick={() => onClick("ProveedoresCRUD")}
             >
-              TO-DO
+              Proveedores
             </button>
-          </li> */}
+          </li>
           
           
-          {/* <li>
+           <li>
             <button
               className={`relative transition-colors duration-300 transform transition-transform ${
-                visibleComponent === "LibroContable.jsx"
+                visibleComponent === "ClientesCRUD.jsx"
                   ? activeStyle
                   : "hover:text-red-600 hover:scale-105 hover:after:scale-x-100 after:scale-x-0 after:transition-transform after:duration-300 after:ease-in-out after:absolute after:bottom-0 after:left-0 after:w-full after:h-0.5 after:bg-red-600"
               }`}
-              onClick={() => onClick("LibroContable.jsx")}
+              onClick={() => onClick("ClientesCRUD.jsx")}
             >
-              LibroContable.jsx
+              Clientes
             </button>
           </li>
           <li>
             <button
               className={`relative transition-colors duration-300 transform transition-transform ${
-                visibleComponent === "InversionesActivosIntangibles"
+                visibleComponent === "PedidosClientesCRUD"
                   ? activeStyle
                   : "hover:text-red-600 hover:scale-105 hover:after:scale-x-100 after:scale-x-0 after:transition-transform after:duration-300 after:ease-in-out after:absolute after:bottom-0 after:left-0 after:w-full after:h-0.5 after:bg-red-600"
               }`}
-              onClick={() => onClick("InversionesActivosIntangibles")}
+              onClick={() => onClick("PedidosClientesCRUD")}
             >
-              ActivosIntangibles
+              Pedidos Clientes
             </button>
           </li>
 
           <li>
             <button
               className={`relative transition-colors duration-300 transform transition-transform ${
-                visibleComponent === "TransactionLog"
+                visibleComponent === "ControlStock"
                   ? activeStyle
                   : "hover:text-red-600 hover:scale-105 hover:after:scale-x-100 after:scale-x-0 after:transition-transform after:duration-300 after:ease-in-out after:absolute after:bottom-0 after:left-0 after:w-full after:h-0.5 after:bg-red-600"
               }`}
-              onClick={() => onClick("TransactionLog")}
+              onClick={() => onClick("ControlStock")}
             >
-              Inversiones
+              ControlStock
             </button>
           </li>
+         
           <li>
             <button
               className={`relative transition-colors duration-300 transform transition-transform ${
-                visibleComponent === "Icm"
+                visibleComponent === "GestionCompras"
                   ? activeStyle
                   : "hover:text-red-600 hover:scale-105 hover:after:scale-x-100 after:scale-x-0 after:transition-transform after:duration-300 after:ease-in-out after:absolute after:bottom-0 after:left-0 after:w-full after:h-0.5 after:bg-red-600"
               }`}
-              onClick={() => onClick("Icm")}
+              onClick={() => onClick("GestionCompras")}
             >
-              Poker
+              GestionCompras
             </button>
           </li>
-          <li>
+          {/* <li>
             <button
               className={`relative transition-colors duration-300 transform transition-transform ${
-                visibleComponent === "Icm"
+                visibleComponent === "GestionCompras"
                   ? activeStyle
                   : "hover:text-red-600 hover:scale-105 hover:after:scale-x-100 after:scale-x-0 after:transition-transform after:duration-300 after:ease-in-out after:absolute after:bottom-0 after:left-0 after:w-full after:h-0.5 after:bg-red-600"
               }`}
@@ -119,22 +132,11 @@ const Sidenav = ({ visibleComponent, onClick }) => {
                 )
               }
             >
-              Trading
+              GestionCompras
             </button>
           </li>
 
-          <li>
-            <button
-              className={`relative transition-colors duration-300 transform transition-transform ${
-                visibleComponent === "Icm"
-                  ? activeStyle
-                  : "hover:text-red-600 hover:scale-105 hover:after:scale-x-100 after:scale-x-0 after:transition-transform after:duration-300 after:ease-in-out after:absolute after:bottom-0 after:left-0 after:w-full after:h-0.5 after:bg-red-600"
-              }`}
-              onClick={() => onClick("Icm")}
-            >
-              ESPatrimonial
-            </button>
-          </li> */}
+           */}
         </ul>
       </div>
     </div>
