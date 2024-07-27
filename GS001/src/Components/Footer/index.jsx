@@ -25,7 +25,7 @@ const Footer = () => {
         </a>
       </div>
       <div>
-        Creado por R3C01L 1NCs
+        Creado por R3C01L
       </div>
     </footer>
   );
