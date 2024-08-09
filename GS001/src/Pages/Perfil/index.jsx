@@ -3,7 +3,7 @@ import Layout from '../../Components/Layout'
 function Perfil() {
   return (
     <Layout>
-      Perfil
+      Login
     </Layout>
   )
 }
