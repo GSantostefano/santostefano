@@ -108,7 +108,7 @@ const LibroDiario = () => {
       <div className="overflow-x-auto mb-4">
         <table className="table-auto min-w-full border-collapse border border-gray-200">
           <thead>
-            <tr className=" bg-black">
+            <tr className=" bg-stone-950">
               <th className="border p-2">Fecha</th>
               <th className="border p-2">Detalle</th>
               {/* <th className="border p-2">Cuenta</th> */}
@@ -119,7 +119,7 @@ const LibroDiario = () => {
           <tbody>
             {entries.map(entry => (
               <React.Fragment key={entry.id}>
-                <tr className="bg-black">
+                <tr className="bg-stone-950">
                   <td className="border p-2">{entry.date}</td>
                   <td className="border p-2">{entry.detail}</td>
                   <td className="border p-2"></td>
@@ -127,7 +127,7 @@ const LibroDiario = () => {
                   <td className="border p-2"></td>
                 </tr>
                 {entry.transactions.map((transaction, index) => (
-                  <tr key={index} className="bg-black">
+                  <tr key={index} className="bg-stone-950">
                     <td className="border p-2"></td>
                     <td className="border p-2"></td>
                     <td className="border p-2">{transaction.account}</td>

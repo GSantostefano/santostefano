@@ -8,7 +8,7 @@ const ClientesCRUD = () => {
     direccion: "",
     telefono: "",
     email: "",
-    contactoPrincipal: "",
+    dni: "",
     notas: "",
   });
   const [editingIndex, setEditingIndex] = useState(-1); // Para controlar la edición de un cliente existente
@@ -39,7 +39,7 @@ const ClientesCRUD = () => {
         direccion: "",
         telefono: "",
         email: "",
-        contactoPrincipal: "",
+        dni: "",
         notas: "",
       }); // Limpiar formulario
     } else {
@@ -60,7 +60,7 @@ const ClientesCRUD = () => {
   return (
     <div className="container mx-auto p-4">
       
-      <h1 className="text-2xl font-bold mb-4">Administrador de Clientes</h1>
+      <h1 className=" text-2xl font-bold mb-4">Administrador de Clientes</h1>
       <div className="mb-4 text-red-600 grid grid-cols-1 sm:grid-cols-2 gap-4">
         <label className="block">
           <span className="">Nombre del cliente:</span>
@@ -119,13 +119,13 @@ const ClientesCRUD = () => {
         </label>
         
         <label className="block">
-          <span className="">Contacto Principal:</span>
+          <span className="">DNI:</span>
           <input
             type="text"
-            name="contactoPrincipal"
-            value={newCliente.contactoPrincipal}
+            name="dni"
+            value={newCliente.dni}
             onChange={handleChange}
-            placeholder="Contacto Principal"
+            placeholder="DNI"
             className="mt-1 block w-full  border-red-300 rounded-md shadow-sm focus:ring-black focus:border-black sm:text-sm"
           />
         </label>
@@ -177,7 +177,7 @@ const ClientesCRUD = () => {
                 Email
               </th>
               <th className="border border-black p-2 align-middle min-w-[100px] max-w-[200px] overflow-x-auto whitespace-nowrap">
-                Contacto Principal
+                DNI
               </th>
               <th className="border border-black p-2 align-middle min-w-[100px] max-w-[200px] overflow-x-auto whitespace-nowrap">
                 Notas
@@ -209,7 +209,7 @@ const ClientesCRUD = () => {
                   {cliente.email}
                 </td>
                 <td className="border border-black p-2 align-middle min-w-[100px] max-w-[200px] overflow-x-auto whitespace-nowrap">
-                  {cliente.contactoPrincipal}
+                  {cliente.dni}
                 </td>
                 <td className="border border-black p-2 align-middle min-w-[100px] max-w-[200px] overflow-x-auto whitespace-nowrap">
                   {cliente.notas}

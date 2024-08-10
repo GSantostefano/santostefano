@@ -90,7 +90,7 @@ const CuentasCRUD = () => {
       <div className="overflow-x-auto">
         <table className="table-auto w-full border-collapse border border-gray-200">
           <thead>
-            <tr className="bg-black text-white">
+            <tr className="bg-stone-950 text-white">
               <th className="border p-2 align-middle min-w-[150px] max-w-[300px] overflow-x-auto whitespace-nowrap">
                 Nombre
               </th>

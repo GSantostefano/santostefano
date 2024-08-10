@@ -23,7 +23,7 @@ const AppRoutes = () => {
 const App = () => {
   return (
     <BrowserRouter>
-      <div className="flex bg-black  flex-col min-h-screen">
+      <div className="flex bg-stone-950  flex-col min-h-screen">
         <NavBar />
         <main className="flex-grow">
           <AppRoutes />

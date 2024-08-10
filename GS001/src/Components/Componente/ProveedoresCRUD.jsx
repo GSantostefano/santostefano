@@ -7,7 +7,7 @@ const ProveedoresCRUD = () => {
     direccion: '',
     telefono: '',
     email: '',
-    contactoPrincipal: '',
+    dni: '',
     notas: ''
   });
   const [editingIndex, setEditingIndex] = useState(-1); // Para controlar la edición de un proveedor existente
@@ -34,7 +34,7 @@ const ProveedoresCRUD = () => {
         direccion: '',
         telefono: '',
         email: '',
-        contactoPrincipal: '',
+        dni: '',
         notas: ''
       }); // Limpiar formulario
     } else {
@@ -92,8 +92,8 @@ const ProveedoresCRUD = () => {
     
     <input
       type="text"
-      name="contactoPrincipal"
-      value={newProveedor.contactoPrincipal}
+      name="dni"
+      value={newProveedor.dni}
       onChange={handleChange}
       placeholder="Contacto Principal"
       className="border p-2"
@@ -134,7 +134,7 @@ const ProveedoresCRUD = () => {
           <td className="border p-2">{proveedor.direccion}</td>
           <td className="border p-2">{proveedor.telefono}</td>
           <td className="border p-2">{proveedor.email}</td>
-          <td className="border p-2">{proveedor.contactoPrincipal}</td>
+          <td className="border p-2">{proveedor.dni}</td>
           <td className="border p-2">{proveedor.notas}</td>
           <td className="border p-2">
             <button onClick={() => handleEditProveedor(index)} className="bg-yellow-500  p-2 mr-2">
