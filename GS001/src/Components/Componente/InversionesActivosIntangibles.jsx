@@ -96,12 +96,12 @@ const InversionesActivosIntangibles = () => {
               placeholder="Valor"
               className="border p-2 mr-2"
             />
-            <button onClick={() => handleRemoveActualizacion(index)} className="bg-red-500 text-white p-2">Eliminar</button>
+            <button onClick={() => handleRemoveActualizacion(index)} className="bg-red-500  p-2">Eliminar</button>
           </div>
         ))}
-        <button onClick={handleAddActualizacion} className="bg-blue-500 text-white p-2 mr-2">Añadir Actualización</button>
-        <button onClick={handleAddActivo} className="bg-green-500 text-white p-2 mr-2">Agregar Activo</button>
-        <button onClick={handleResetActivo} className="bg-gray-500 text-white p-2">Cancelar</button>
+        <button onClick={handleAddActualizacion} className="bg-blue-500  p-2 mr-2">Añadir Actualización</button>
+        <button onClick={handleAddActivo} className="bg-green-500  p-2 mr-2">Agregar Activo</button>
+        <button onClick={handleResetActivo} className="bg-gray-500  p-2">Cancelar</button>
       </div>
       <div className="overflow-auto max-h-96">
         <table className="table-fixed w-full border-collapse border border-gray-200">

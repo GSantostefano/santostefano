@@ -69,172 +69,277 @@ const Inventario = () => {
   };
 
   return (
-    <div className="container text-black mx-auto p-4">
+    <div className="container mx-auto p-4">
       <h1 className="text-2xl font-bold mb-4">Inventario</h1>
-      <div className="mb-4 grid grid-cols-2 w-12/12 gap-4">
-        <input
-          type="text"
-          name="nombre"
-          value={newItem.nombre}
-          onChange={handleChange}
-          placeholder="Nombre del ítem"
-          className="border p-2 mr-2"
-        />
-        <input
-          type="text"
-          name="descripcion"
-          value={newItem.descripcion}
-          onChange={handleChange}
-          placeholder="Descripción"
-          className="border p-2 mr-2"
-        />
-        <select
-          name="categoria"
-          value={newItem.categoria}
-          onChange={handleChange}
-          className="border p-2 mr-2"
+      <div className="mb-4 grid grid-cols-2 gap-4">
+        <label className="block">
+          <span className="">Nombre del ítem:</span>
+          <input
+            type="text"
+            name="nombre"
+            value={newItem.nombre}
+            onChange={handleChange}
+            placeholder="Nombre del ítem"
+            className="mt-1 block w-full border-red-300 rounded-md shadow-sm focus:ring-red-500 focus:border-red-500 sm:text-sm"
+          />
+        </label>
+        <label className="block">
+          <span className="">Descripción:</span>
+          <input
+            type="text"
+            name="descripcion"
+            value={newItem.descripcion}
+            onChange={handleChange}
+            placeholder="Descripción"
+            className="mt-1 block w-full border-red-300 rounded-md shadow-sm focus:ring-red-500 focus:border-red-500 sm:text-sm"
+          />
+        </label>
+        <label className="block">
+          <span className="">Categoría:</span>
+          <select
+            name="categoria"
+            value={newItem.categoria}
+            onChange={handleChange}
+            className="mt-1 block w-full border-red-300 rounded-md shadow-sm focus:ring-red-500 focus:border-red-500 sm:text-sm"
+          >
+            <option value="Alimento">Alimento</option>
+            <option value="Juguete">Juguete</option>
+            <option value="Accesorio">Accesorio</option>
+            <option value="Medicamento">Medicamento</option>
+          </select>
+        </label>
+        <label className="block">
+          <span className="">Cantidad:</span>
+          <input
+            type="number"
+            name="cantidad"
+            value={newItem.cantidad}
+            onChange={handleChange}
+            placeholder="Cantidad"
+            className="mt-1 block w-full border-red-300 rounded-md shadow-sm focus:ring-red-500 focus:border-red-500 sm:text-sm"
+          />
+        </label>
+        <label className="block">
+          <span className="">Precio:</span>
+          <input
+            type="number"
+            name="precio"
+            value={newItem.precio}
+            onChange={handleChange}
+            placeholder="Precio"
+            className="mt-1 block w-full border-red-300 rounded-md shadow-sm focus:ring-red-500 focus:border-red-500 sm:text-sm"
+          />
+        </label>
+        <label className="block">
+          <span className="">Fecha de Adquisición:</span>
+          <input
+            type="date"
+            name="fechaAdquisicion"
+            value={newItem.fechaAdquisicion}
+            onChange={handleChange}
+            className="mt-1 block w-full border-red-300 rounded-md shadow-sm focus:ring-red-500 focus:border-red-500 sm:text-sm"
+          />
+        </label>
+        <label className="block">
+          <span className="">Fecha de Vencimiento:</span>
+          <input
+            type="date"
+            name="fechaVencimiento"
+            value={newItem.fechaVencimiento}
+            onChange={handleChange}
+            className="mt-1 block w-full border-red-300 rounded-md shadow-sm focus:ring-red-500 focus:border-red-500 sm:text-sm"
+          />
+        </label>
+        <label className="block">
+          <span className="">Proveedor:</span>
+          <input
+            type="text"
+            name="proveedor"
+            value={newItem.proveedor}
+            onChange={handleChange}
+            placeholder="Proveedor"
+            className="mt-1 block w-full border-red-300 rounded-md shadow-sm focus:ring-red-500 focus:border-red-500 sm:text-sm"
+          />
+        </label>
+        <label className="block">
+          <span className="">Ubicación:</span>
+          <input
+            type="text"
+            name="ubicacion"
+            value={newItem.ubicacion}
+            onChange={handleChange}
+            placeholder="Ubicación"
+            className="mt-1 block w-full border-red-300 rounded-md shadow-sm focus:ring-red-500 focus:border-red-500 sm:text-sm"
+          />
+        </label>
+        <label className="block">
+          <span className="">SKU:</span>
+          <input
+            type="text"
+            name="sku"
+            value={newItem.sku}
+            onChange={handleChange}
+            placeholder="SKU"
+            className="mt-1 block w-full border-red-300 rounded-md shadow-sm focus:ring-red-500 focus:border-red-500 sm:text-sm"
+          />
+        </label>
+        <label className="block">
+          <span className="">Código de Barras:</span>
+          <input
+            type="text"
+            name="codigoBarras"
+            value={newItem.codigoBarras}
+            onChange={handleChange}
+            placeholder="Código de Barras"
+            className="mt-1 block w-full border-red-300 rounded-md shadow-sm focus:ring-red-500 focus:border-red-500 sm:text-sm"
+          />
+        </label>
+        <label className="block">
+          <span className="">URL de Imagen:</span>
+          <input
+            type="text"
+            name="imagen"
+            value={newItem.imagen}
+            onChange={handleChange}
+            placeholder="URL de Imagen"
+            className="mt-1 block w-full border-red-300 rounded-md shadow-sm focus:ring-red-500 focus:border-red-500 sm:text-sm"
+          />
+        </label>
+        <label className="block">
+          <span className="">Notas:</span>
+          <input
+            type="text"
+            name="notas"
+            value={newItem.notas}
+            onChange={handleChange}
+            placeholder="Notas"
+            className="mt-1 block w-full border-red-300 rounded-md shadow-sm focus:ring-red-500 focus:border-red-500 sm:text-sm"
+          />
+        </label>
+        <button
+          onClick={handleAddItem}
+          className="text-white inline-flex justify-center py-2 px-4 border border-transparent shadow-sm text-sm font-medium rounded-md bg-red-600 hover:bg-red-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-red-500"
         >
-          <option value="Alimento">Alimento</option>
-          <option value="Juguete">Juguete</option>
-          <option value="Accesorio">Accesorio</option>
-          <option value="Medicamento">Medicamento</option>
-        </select>
-        <input
-          type="number"
-          name="cantidad"
-          value={newItem.cantidad}
-          onChange={handleChange}
-          placeholder="Cantidad"
-          className="border p-2 mr-2"
-        />
-        <input
-          type="number"
-          name="precio"
-          value={newItem.precio}
-          onChange={handleChange}
-          placeholder="Precio"
-          className="border p-2 mr-2"
-        />
-        <input
-          type="date"
-          name="fechaAdquisicion"
-          value={newItem.fechaAdquisicion}
-          onChange={handleChange}
-          className="border p-2 mr-2"
-        />
-        <input
-          type="date"
-          name="fechaVencimiento"
-          value={newItem.fechaVencimiento}
-          onChange={handleChange}
-          className="border p-2 mr-2"
-        />
-        <input
-          type="text"
-          name="proveedor"
-          value={newItem.proveedor}
-          onChange={handleChange}
-          placeholder="Proveedor"
-          className="border p-2 mr-2"
-        />
-        <input
-          type="text"
-          name="ubicacion"
-          value={newItem.ubicacion}
-          onChange={handleChange}
-          placeholder="Ubicación"
-          className="border p-2 mr-2"
-        />
-        <input
-          type="text"
-          name="sku"
-          value={newItem.sku}
-          onChange={handleChange}
-          placeholder="SKU"
-          className="border p-2 mr-2"
-        />
-        <input
-          type="text"
-          name="codigoBarras"
-          value={newItem.codigoBarras}
-          onChange={handleChange}
-          placeholder="Código de Barras"
-          className="border p-2 mr-2"
-        />
-        <input
-          type="text"
-          name="imagen"
-          value={newItem.imagen}
-          onChange={handleChange}
-          placeholder="URL de Imagen"
-          className="border p-2 mr-2"
-        />
-        <input
-          type="text"
-          name="notas"
-          value={newItem.notas}
-          onChange={handleChange}
-          placeholder="Notas"
-          className="border p-2 mr-2"
-        />
-        <button onClick={handleAddItem} className="bg-blue-500 text-white p-2 mr-2">
           {editingIndex === -1 ? 'Agregar Ítem' : 'Guardar Cambios'}
         </button>
         {editingIndex !== -1 && (
-          <button onClick={() => setEditingIndex(-1)} className="bg-gray-500 text-white p-2">
+          <button
+            onClick={() => setEditingIndex(-1)}
+            className="bg-gray-500 text-white p-2"
+          >
             Cancelar Edición
           </button>
         )}
       </div>
-      <table className="table-auto w-full border-collapse border border-gray-200">
-        <thead>
-          <tr className="bg-gray-100">
-            <th className="border p-2">Nombre</th>
-            <th className="border p-2">Descripción</th>
-            <th className="border p-2">Categoría</th>
-            <th className="border p-2">Cantidad</th>
-            <th className="border p-2">Precio</th>
-            <th className="border p-2">Fecha de Adquisición</th>
-            <th className="border p-2">Fecha de Vencimiento</th>
-            <th className="border p-2">Proveedor</th>
-            <th className="border p-2">Ubicación</th>
-            <th className="border p-2">SKU</th>
-            <th className="border p-2">Código de Barras</th>
-            <th className="border p-2">Imagen</th>
-            <th className="border p-2">Notas</th>
-            <th className="border p-2">Acciones</th>
-          </tr>
-        </thead>
-        <tbody>
-          {items.map((item, index) => (
-            <tr key={item.id}>
-              <td className="border p-2">{item.nombre}</td>
-              <td className="border p-2">{item.descripcion}</td>
-              <td className="border p-2">{item.categoria}</td>
-              <td className="border p-2">{item.cantidad}</td>
-              <td className="border p-2">${item.precio}</td>
-              <td className="border p-2">{item.fechaAdquisicion}</td>
-              <td className="border p-2">{item.fechaVencimiento}</td>
-              <td className="border p-2">{item.proveedor}</td>
-              <td className="border p-2">{item.ubicacion}</td>
-              <td className="border p-2">{item.sku}</td>
-              <td className="border p-2">{item.codigoBarras}</td>
-              <td className="border p-2">
-                {item.imagen && <img src={item.imagen} alt={item.nombre} className="w-16 h-16" />}
-              </td>
-              <td className="border p-2">{item.notas}</td>
-              <td className="border p-2">
-                <button onClick={() => handleEditItem(index)} className="bg-yellow-500 text-white p-2 mr-2">
-                  Editar
-                </button>
-                <button onClick={() => handleDeleteItem(index)} className="bg-red-500 text-white p-2">
-                  Eliminar
-                </button>
-              </td>
+      <div className="overflow-x-auto">
+        <table className="table-auto w-full border-collapse border border-gray-200">
+          <thead>
+            <tr className="bg-black text-white">
+              <th className="border p-2 align-middle min-w-[150px] max-w-[300px] overflow-x-auto whitespace-nowrap">
+                Nombre
+              </th>
+              <th className="border p-2 align-middle min-w-[150px] max-w-[300px] overflow-x-auto whitespace-nowrap">
+                Descripción
+              </th>
+              <th className="border p-2 align-middle min-w-[150px] max-w-[300px] overflow-x-auto whitespace-nowrap">
+                Categoría
+              </th>
+              <th className="border p-2 align-middle min-w-[150px] max-w-[300px] overflow-x-auto whitespace-nowrap">
+                Cantidad
+              </th>
+              <th className="border p-2 align-middle min-w-[150px] max-w-[300px] overflow-x-auto whitespace-nowrap">
+                Precio
+              </th>
+              <th className="border p-2 align-middle min-w-[150px] max-w-[300px] overflow-x-auto whitespace-nowrap">
+                Fecha de Adquisición
+              </th>
+              <th className="border p-2 align-middle min-w-[150px] max-w-[300px] overflow-x-auto whitespace-nowrap">
+                Fecha de Vencimiento
+              </th>
+              <th className="border p-2 align-middle min-w-[150px] max-w-[300px] overflow-x-auto whitespace-nowrap">
+                Proveedor
+              </th>
+              <th className="border p-2 align-middle min-w-[150px] max-w-[300px] overflow-x-auto whitespace-nowrap">
+                Ubicación
+              </th>
+              <th className="border p-2 align-middle min-w-[150px] max-w-[300px] overflow-x-auto whitespace-nowrap">
+                SKU
+              </th>
+              <th className="border p-2 align-middle min-w-[150px] max-w-[300px] overflow-x-auto whitespace-nowrap">
+                Código de Barras
+              </th>
+              <th className="border p-2 align-middle min-w-[150px] max-w-[300px] overflow-x-auto whitespace-nowrap">
+                Imagen
+              </th>
+              <th className="border p-2 align-middle min-w-[150px] max-w-[300px] overflow-x-auto whitespace-nowrap">
+                Notas
+              </th>
+              <th className="border p-2 align-middle min-w-[150px] max-w-[300px] overflow-x-auto whitespace-nowrap">
+                Acciones
+              </th>
             </tr>
-          ))}
-        </tbody>
-      </table>
+          </thead>
+          <tbody>
+            {items.map((item, index) => (
+              <tr key={item.id} className="h-16">
+                <td className="border p-2 align-middle min-w-[150px] max-w-[300px] overflow-x-auto whitespace-nowrap">
+                  {item.nombre}
+                </td>
+                <td className="border p-2 align-middle min-w-[150px] max-w-[300px] overflow-x-auto whitespace-nowrap">
+                  {item.descripcion}
+                </td>
+                <td className="border p-2 align-middle min-w-[150px] max-w-[300px] overflow-x-auto whitespace-nowrap">
+                  {item.categoria}
+                </td>
+                <td className="border p-2 align-middle min-w-[150px] max-w-[300px] overflow-x-auto whitespace-nowrap">
+                  {item.cantidad}
+                </td>
+                <td className="border p-2 align-middle min-w-[150px] max-w-[300px] overflow-x-auto whitespace-nowrap">
+                  ${item.precio}
+                </td>
+                <td className="border p-2 align-middle min-w-[150px] max-w-[300px] overflow-x-auto whitespace-nowrap">
+                  {item.fechaAdquisicion}
+                </td>
+                <td className="border p-2 align-middle min-w-[150px] max-w-[300px] overflow-x-auto whitespace-nowrap">
+                  {item.fechaVencimiento}
+                </td>
+                <td className="border p-2 align-middle min-w-[150px] max-w-[300px] overflow-x-auto whitespace-nowrap">
+                  {item.proveedor}
+                </td>
+                <td className="border p-2 align-middle min-w-[150px] max-w-[300px] overflow-x-auto whitespace-nowrap">
+                  {item.ubicacion}
+                </td>
+                <td className="border p-2 align-middle min-w-[150px] max-w-[300px] overflow-x-auto whitespace-nowrap">
+                  {item.sku}
+                </td>
+                <td className="border p-2 align-middle min-w-[150px] max-w-[300px] overflow-x-auto whitespace-nowrap">
+                  {item.codigoBarras}
+                </td>
+                <td className="border p-2 align-middle min-w-[150px] max-w-[300px] overflow-x-auto whitespace-nowrap">
+                  {item.imagen && <img src={item.imagen} alt={item.nombre} className="w-16 h-16" />}
+                </td>
+                <td className="border p-2 align-middle min-w-[150px] max-w-[300px] overflow-x-auto whitespace-nowrap">
+                  {item.notas}
+                </td>
+                <td className="border p-2 align-middle h-full">
+                  <button
+                    onClick={() => handleEditItem(index)}
+                    className="bg-yellow-500 text-white inline-flex justify-center py-2 px-4 border border-transparent shadow-sm text-sm font-medium rounded-md hover:bg-yellow-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-yellow-500 h-full w-full"
+                  >
+                    Editar
+                  </button>
+                  <button
+                    onClick={() => handleDeleteItem(index)}
+                    className="bg-red-600 text-white inline-flex justify-center py-2 px-4 border border-transparent shadow-sm text-sm font-medium rounded-md hover:bg-red-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-red-500 h-full w-full mt-2"
+                  >
+                    Eliminar
+                  </button>
+                </td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
     </div>
   );
 };

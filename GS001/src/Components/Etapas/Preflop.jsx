@@ -104,7 +104,7 @@ const Preflop = () => {
       case '♣':
         return 'text-green-600'; // Verde para tréboles
       case '♠':
-        return 'text-white'; // Negro para picas
+        return ''; // Negro para picas
       default:
         return '';
     }
@@ -112,14 +112,14 @@ const Preflop = () => {
 
   return (
     <div className=''>
-       <button onClick={handleClearSelection} className="bg-red-600 text-white px-4 py-2 mt-4 rounded-md">Clear</button>
+       <button onClick={handleClearSelection} className="bg-red-600  px-4 py-2 mt-4 rounded-md">Clear</button>
       <div className='mt-2' >
      
         <h2>Seleccionar Posicion:</h2>
         <div className=' mt-2 flex flex-row  gap-1 text-red-600'>
           {positions.map(position => (
             <div
-              className={`border-2 pl-1 pr-1 rounded-lg cursor-pointer hover:text-yellow-300 hover:bg-red-600 position ${isPositionSelected(position) ? 'selected ' : 'text-white'}`}
+              className={`border-2 pl-1 pr-1 rounded-lg cursor-pointer hover:text-yellow-300 hover:bg-red-600 position ${isPositionSelected(position) ? 'selected ' : ''}`}
               key={position}
               onClick={() => handlePositionClick(position)}
             >
@@ -145,10 +145,10 @@ const Preflop = () => {
     </ul>
     <div className="flex flex-row items-center text-2xl gap-3 p-3">
   
-  {/* <button onClick={""} className="flex flex-row text-white px-1 border-2 rounded-lg hover:bg-red-600">OR</button><p className='text-green-500'>2.5x</p>
-  <button onClick={""} className="flex flex-row text-white px-1 border-2 rounded-lg hover:bg-red-600">ROL</button><p className='text-green-500'>2.5x + 1xL</p>
-  <button onClick={""} className="flex flex-row text-white px-1 border-2 rounded-lg hover:bg-red-600">3Bet</button><p className='text-yellow-300'>call</p>
-  <button onClick={""} className="flex flex-row text-white px-1 border-2 rounded-lg hover:bg-red-600">4Bet</button><p className='text-red-500'>fold</p>
+  {/* <button onClick={""} className="flex flex-row  px-1 border-2 rounded-lg hover:bg-red-600">OR</button><p className='text-green-500'>2.5x</p>
+  <button onClick={""} className="flex flex-row  px-1 border-2 rounded-lg hover:bg-red-600">ROL</button><p className='text-green-500'>2.5x + 1xL</p>
+  <button onClick={""} className="flex flex-row  px-1 border-2 rounded-lg hover:bg-red-600">3Bet</button><p className='text-yellow-300'>call</p>
+  <button onClick={""} className="flex flex-row  px-1 border-2 rounded-lg hover:bg-red-600">4Bet</button><p className='text-red-500'>fold</p>
    */}
   </div>
         </div>

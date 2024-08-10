@@ -109,11 +109,11 @@ const PedidosClientesCRUD = () => {
           placeholder="Notas"
           className="border p-2 mr-2"
         />
-        <button onClick={handleAddPedido} className="bg-blue-500 text-white p-2 mr-2">
+        <button onClick={handleAddPedido} className="bg-blue-500  p-2 mr-2">
           {editingIndex === -1 ? 'Agregar Pedido' : 'Guardar Cambios'}
         </button>
         {editingIndex !== -1 && (
-          <button onClick={() => setEditingIndex(-1)} className="bg-gray-500 text-white p-2">
+          <button onClick={() => setEditingIndex(-1)} className="bg-gray-500  p-2">
             Cancelar Edición
           </button>
         )}
@@ -140,10 +140,10 @@ const PedidosClientesCRUD = () => {
               <td className="border p-2">{pedido.estado}</td>
               <td className="border p-2">{pedido.notas}</td>
               <td className="border p-2">
-                <button onClick={() => handleEditPedido(index)} className="bg-yellow-500 text-white p-2 mr-2">
+                <button onClick={() => handleEditPedido(index)} className="bg-yellow-500  p-2 mr-2">
                   Editar
                 </button>
-                <button onClick={() => handleDeletePedido(index)} className="bg-red-500 text-white p-2">
+                <button onClick={() => handleDeletePedido(index)} className="bg-red-500  p-2">
                   Eliminar
                 </button>
               </td>

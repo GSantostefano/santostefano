@@ -89,6 +89,7 @@ const ProveedoresCRUD = () => {
       placeholder="Email"
       className="border p-2"
     />
+    
     <input
       type="text"
       name="contactoPrincipal"
@@ -105,11 +106,11 @@ const ProveedoresCRUD = () => {
       placeholder="Notas"
       className="border p-2"
     />
-    <button onClick={handleAddProveedor} className="bg-blue-500 text-white p-2">
+    <button onClick={handleAddProveedor} className="bg-blue-500  p-2">
       {editingIndex === -1 ? 'Agregar Proveedor' : 'Guardar Cambios'}
     </button>
     {editingIndex !== -1 && (
-      <button onClick={() => setEditingIndex(-1)} className="bg-gray-500 text-white p-2">
+      <button onClick={() => setEditingIndex(-1)} className="bg-gray-500  p-2">
         Cancelar Edición
       </button>
     )}
@@ -136,10 +137,10 @@ const ProveedoresCRUD = () => {
           <td className="border p-2">{proveedor.contactoPrincipal}</td>
           <td className="border p-2">{proveedor.notas}</td>
           <td className="border p-2">
-            <button onClick={() => handleEditProveedor(index)} className="bg-yellow-500 text-white p-2 mr-2">
+            <button onClick={() => handleEditProveedor(index)} className="bg-yellow-500  p-2 mr-2">
               Editar
             </button>
-            <button onClick={() => handleDeleteProveedor(index)} className="bg-red-500 text-white p-2">
+            <button onClick={() => handleDeleteProveedor(index)} className="bg-red-500  p-2">
               Eliminar
             </button>
           </td>

@@ -83,7 +83,7 @@ const GestionCompras = () => {
           placeholder="Fecha de Orden"
           className="border p-2 mr-2"
         />
-        <button onClick={handleAddOrdenCompra} className="bg-blue-500 text-white p-2">
+        <button onClick={handleAddOrdenCompra} className="bg-blue-500  p-2">
           Agregar Orden de Compra
         </button>
       </div>
@@ -109,7 +109,7 @@ const GestionCompras = () => {
               <td className="border p-2">{orden.estado}</td>
               <td className="border p-2">
                 {orden.estado === 'Pendiente' && (
-                  <button onClick={() => handleRecepcionMercancias(index)} className="bg-green-500 text-white p-2">
+                  <button onClick={() => handleRecepcionMercancias(index)} className="bg-green-500  p-2">
                     Recepción de Mercancías
                   </button>
                 )}

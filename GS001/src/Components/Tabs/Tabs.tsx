@@ -72,7 +72,7 @@ function getVariantStyles(tabVariant: TabsListVariant) {
         // text color
         'text-gray-500 dark:text-gray-500',
         // hover
-        'hover:text-gray-700 hover:dark:text-gray-400',
+        'hover: hover:dark:text-gray-400',
         // border hover
         'hover:border-gray-300 hover:dark:border-gray-400',
         // selected
@@ -80,7 +80,7 @@ function getVariantStyles(tabVariant: TabsListVariant) {
         'data-[state=active]:dark:border-gray-50 data-[state=active]:dark:text-gray-50',
         // disabled
         'disabled:pointer-events-none',
-        'disabled:text-gray-300 disabled:dark:text-gray-700'
+        'disabled:text-gray-300 disabled:dark:'
       );
     case 'solid':
       return cx(
@@ -89,7 +89,7 @@ function getVariantStyles(tabVariant: TabsListVariant) {
         // text color
         'text-gray-500 dark:text-gray-400',
         // hover
-        'hover:text-gray-700 hover:dark:text-gray-200',
+        'hover: hover:dark:text-gray-200',
         // selected
         ' data-[state=active]:bg-white data-[state=active]:text-gray-900 data-[state=active]:shadow',
         'data-[state=active]:dark:bg-gray-900 data-[state=active]:dark:text-gray-50',

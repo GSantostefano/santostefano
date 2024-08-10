@@ -2,9 +2,21 @@ const Sidenav = ({ visibleComponent, onClick }) => {
   const activeStyle = "text-red-600 underline underline-offset-4";
 
   return (
-    <div className="h-3/4 w-64  fixed left-0 text-black flex items-center flex-col p-4">
+    <div className="h-3/4 w-64  fixed left-0  flex items-center flex-col p-4">
       <div>
         <ul className="flex flex-col items-left mt-10 gap-3">
+        <li>
+            <button
+              className={`relative transition-colors duration-300 transform transition-transform ${
+                visibleComponent === "ClientesCRUD.jsx"
+                  ? activeStyle
+                  : "hover:text-red-600 hover:scale-105 hover:after:scale-x-100 after:scale-x-0 after:transition-transform after:duration-300 after:ease-in-out after:absolute after:bottom-0 after:left-0 after:w-full after:h-0.5 after:bg-red-600"
+              }`}
+              onClick={() => onClick("ClientesCRUD.jsx")}
+            >
+              Clientes
+            </button>
+          </li>
         <li>
             <button
               className={`relative transition-colors duration-300 transform transition-transform ${
@@ -67,18 +79,7 @@ const Sidenav = ({ visibleComponent, onClick }) => {
           </li>
           
           
-           <li>
-            <button
-              className={`relative transition-colors duration-300 transform transition-transform ${
-                visibleComponent === "ClientesCRUD.jsx"
-                  ? activeStyle
-                  : "hover:text-red-600 hover:scale-105 hover:after:scale-x-100 after:scale-x-0 after:transition-transform after:duration-300 after:ease-in-out after:absolute after:bottom-0 after:left-0 after:w-full after:h-0.5 after:bg-red-600"
-              }`}
-              onClick={() => onClick("ClientesCRUD.jsx")}
-            >
-              Clientes
-            </button>
-          </li>
+
           <li>
             <button
               className={`relative transition-colors duration-300 transform transition-transform ${

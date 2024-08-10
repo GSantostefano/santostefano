@@ -98,17 +98,17 @@ const LibroDiario = () => {
               placeholder="Haber"
               className="border p-2 mr-2"
             />
-            <button onClick={() => handleRemoveTransaction(index)} className="bg-red-500 text-white p-2 ml-2 rounded-md">Eliminar</button>
+            <button onClick={() => handleRemoveTransaction(index)} className="bg-red-500  p-2 ml-2 rounded-md">Eliminar</button>
           </div>
         ))}
-        <button onClick={handleAddTransaction} className="bg-blue-500 text-white p-2 rounded-md mr-2">Añadir Transacción</button>
-        <button onClick={handleAddEntry} className="bg-green-500 text-white p-2 rounded-md mr-2">Registrar</button>
-        <button onClick={handleResetEntry} className="bg-gray-500 text-white p-2 rounded-md">Cancelar</button>
+        <button onClick={handleAddTransaction} className="bg-blue-500  p-2 rounded-md mr-2">Añadir Transacción</button>
+        <button onClick={handleAddEntry} className="bg-green-500  p-2 rounded-md mr-2">Registrar</button>
+        <button onClick={handleResetEntry} className="bg-gray-500  p-2 rounded-md">Cancelar</button>
       </div>
       <div className="overflow-x-auto mb-4">
         <table className="table-auto min-w-full border-collapse border border-gray-200">
           <thead>
-            <tr className="text-white bg-black">
+            <tr className=" bg-black">
               <th className="border p-2">Fecha</th>
               <th className="border p-2">Detalle</th>
               {/* <th className="border p-2">Cuenta</th> */}

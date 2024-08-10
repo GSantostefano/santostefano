@@ -87,7 +87,7 @@ const ControlStock = () => {
           placeholder="Notas"
           className="border p-2 mr-2"
         />
-        <button onClick={handleAddProducto} className="bg-blue-500 text-white p-2">
+        <button onClick={handleAddProducto} className="bg-blue-500  p-2">
           Agregar Movimiento
         </button>
       </div>

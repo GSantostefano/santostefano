@@ -106,12 +106,12 @@ const LibroContable = () => {
               placeholder="Costo de Operación"
               className="border p-2 mr-2"
             />
-            <button onClick={() => handleRemoveTransaction(index)} className="bg-red-500 text-white p-2">Eliminar</button>
+            <button onClick={() => handleRemoveTransaction(index)} className="bg-red-500  p-2">Eliminar</button>
           </div>
         ))}
-        <button onClick={handleAddTransaction} className="bg-blue-500 text-white p-2 mr-2">Añadir Transacción</button>
-        <button onClick={handleAddEntry} className="bg-green-500 text-white p-2 mr-2">Agregar Entrada</button>
-        <button onClick={handleResetEntry} className="bg-gray-500 text-white p-2">Cancelar</button>
+        <button onClick={handleAddTransaction} className="bg-blue-500  p-2 mr-2">Añadir Transacción</button>
+        <button onClick={handleAddEntry} className="bg-green-500  p-2 mr-2">Agregar Entrada</button>
+        <button onClick={handleResetEntry} className="bg-gray-500  p-2">Cancelar</button>
       </div>
       <table className="table-auto w-full border-collapse border border-gray-200">
         <thead>
