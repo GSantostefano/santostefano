@@ -71,7 +71,7 @@ const Inventario = () => {
   return (
     <div className="container mx-auto p-4">
       <h1 className="text-2xl font-bold mb-4">Inventario</h1>
-      <div className="mb-4 grid grid-cols-2 gap-4">
+      <div className="mb-4 text-red-600 grid grid-cols-2 gap-4">
         <label className="block">
           <span className="">Nombre del ítem:</span>
           <input
@@ -80,7 +80,7 @@ const Inventario = () => {
             value={newItem.nombre}
             onChange={handleChange}
             placeholder="Nombre del ítem"
-            className="mt-1 block w-full border-red-300 rounded-md shadow-sm focus:ring-red-500 focus:border-red-500 sm:text-sm"
+             className="mt-1 block w-full text-black  border-red-300 rounded-md shadow-sm focus:ring-black focus:border-black sm:text-sm"
           />
         </label>
         <label className="block">
@@ -91,7 +91,7 @@ const Inventario = () => {
             value={newItem.descripcion}
             onChange={handleChange}
             placeholder="Descripción"
-            className="mt-1 block w-full border-red-300 rounded-md shadow-sm focus:ring-red-500 focus:border-red-500 sm:text-sm"
+            className="mt-1 block w-full text-black  border-red-300 rounded-md shadow-sm focus:ring-black focus:border-black sm:text-sm"
           />
         </label>
         <label className="block">
@@ -100,7 +100,7 @@ const Inventario = () => {
             name="categoria"
             value={newItem.categoria}
             onChange={handleChange}
-            className="mt-1 block w-full border-red-300 rounded-md shadow-sm focus:ring-red-500 focus:border-red-500 sm:text-sm"
+            className="mt-1 block w-full text-black  border-red-300 rounded-md shadow-sm focus:ring-black focus:border-black sm:text-sm"
           >
             <option value="Alimento">Alimento</option>
             <option value="Juguete">Juguete</option>
@@ -116,7 +116,7 @@ const Inventario = () => {
             value={newItem.cantidad}
             onChange={handleChange}
             placeholder="Cantidad"
-            className="mt-1 block w-full border-red-300 rounded-md shadow-sm focus:ring-red-500 focus:border-red-500 sm:text-sm"
+            className="mt-1 block w-full text-black  border-red-300 rounded-md shadow-sm focus:ring-black focus:border-black sm:text-sm"
           />
         </label>
         <label className="block">
@@ -127,7 +127,7 @@ const Inventario = () => {
             value={newItem.precio}
             onChange={handleChange}
             placeholder="Precio"
-            className="mt-1 block w-full border-red-300 rounded-md shadow-sm focus:ring-red-500 focus:border-red-500 sm:text-sm"
+            className="mt-1 block w-full text-black  border-red-300 rounded-md shadow-sm focus:ring-black focus:border-black sm:text-sm"
           />
         </label>
         <label className="block">
@@ -137,7 +137,7 @@ const Inventario = () => {
             name="fechaAdquisicion"
             value={newItem.fechaAdquisicion}
             onChange={handleChange}
-            className="mt-1 block w-full border-red-300 rounded-md shadow-sm focus:ring-red-500 focus:border-red-500 sm:text-sm"
+            className="mt-1 block w-full text-black  border-red-300 rounded-md shadow-sm focus:ring-black focus:border-black sm:text-sm"
           />
         </label>
         <label className="block">
@@ -147,7 +147,7 @@ const Inventario = () => {
             name="fechaVencimiento"
             value={newItem.fechaVencimiento}
             onChange={handleChange}
-            className="mt-1 block w-full border-red-300 rounded-md shadow-sm focus:ring-red-500 focus:border-red-500 sm:text-sm"
+            className="mt-1 block w-full text-black  border-red-300 rounded-md shadow-sm focus:ring-black focus:border-black sm:text-sm"
           />
         </label>
         <label className="block">
@@ -158,7 +158,7 @@ const Inventario = () => {
             value={newItem.proveedor}
             onChange={handleChange}
             placeholder="Proveedor"
-            className="mt-1 block w-full border-red-300 rounded-md shadow-sm focus:ring-red-500 focus:border-red-500 sm:text-sm"
+            className="mt-1 block w-full text-black  border-red-300 rounded-md shadow-sm focus:ring-black focus:border-black sm:text-sm"
           />
         </label>
         <label className="block">
@@ -169,7 +169,7 @@ const Inventario = () => {
             value={newItem.ubicacion}
             onChange={handleChange}
             placeholder="Ubicación"
-            className="mt-1 block w-full border-red-300 rounded-md shadow-sm focus:ring-red-500 focus:border-red-500 sm:text-sm"
+            className="mt-1 block w-full text-black  border-red-300 rounded-md shadow-sm focus:ring-black focus:border-black sm:text-sm"
           />
         </label>
         <label className="block">
@@ -180,7 +180,7 @@ const Inventario = () => {
             value={newItem.sku}
             onChange={handleChange}
             placeholder="SKU"
-            className="mt-1 block w-full border-red-300 rounded-md shadow-sm focus:ring-red-500 focus:border-red-500 sm:text-sm"
+            className="mt-1 block w-full text-black  border-red-300 rounded-md shadow-sm focus:ring-black focus:border-black sm:text-sm"
           />
         </label>
         <label className="block">
@@ -191,7 +191,7 @@ const Inventario = () => {
             value={newItem.codigoBarras}
             onChange={handleChange}
             placeholder="Código de Barras"
-            className="mt-1 block w-full border-red-300 rounded-md shadow-sm focus:ring-red-500 focus:border-red-500 sm:text-sm"
+            className="mt-1 block w-full text-black  border-red-300 rounded-md shadow-sm focus:ring-black focus:border-black sm:text-sm"
           />
         </label>
         <label className="block">
@@ -202,7 +202,7 @@ const Inventario = () => {
             value={newItem.imagen}
             onChange={handleChange}
             placeholder="URL de Imagen"
-            className="mt-1 block w-full border-red-300 rounded-md shadow-sm focus:ring-red-500 focus:border-red-500 sm:text-sm"
+            className="mt-1 block w-full text-black  border-red-300 rounded-md shadow-sm focus:ring-black focus:border-black sm:text-sm"
           />
         </label>
         <label className="block">
@@ -213,7 +213,7 @@ const Inventario = () => {
             value={newItem.notas}
             onChange={handleChange}
             placeholder="Notas"
-            className="mt-1 block w-full border-red-300 rounded-md shadow-sm focus:ring-red-500 focus:border-red-500 sm:text-sm"
+            className="mt-1 block w-full text-black  border-red-300 rounded-md shadow-sm focus:ring-black focus:border-black sm:text-sm"
           />
         </label>
         <button

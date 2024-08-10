@@ -52,7 +52,7 @@ const LibroDiarioMayor = () => {
             name="fecha"
             value={newTransaccion.fecha}
             onChange={handleChange}
-            className="mt-1 block w-full border-red-300 rounded-md shadow-sm focus:ring-red-500 focus:border-red-500 sm:text-sm"
+            className="mt-1 block w-full text-black  border-red-300 rounded-md shadow-sm focus:ring-black focus:border-black sm:text-sm"
           />
         </label>
         <label className="block">
@@ -63,7 +63,7 @@ const LibroDiarioMayor = () => {
             value={newTransaccion.descripcion}
             onChange={handleChange}
             placeholder="Descripción"
-            className="mt-1 block w-full border-red-300 rounded-md shadow-sm focus:ring-red-500 focus:border-red-500 sm:text-sm"
+            className="mt-1 block w-full text-black  border-red-300 rounded-md shadow-sm focus:ring-black focus:border-black sm:text-sm"
           />
         </label>
         <label className="block">
@@ -74,7 +74,7 @@ const LibroDiarioMayor = () => {
             value={newTransaccion.cuenta}
             onChange={handleChange}
             placeholder="Cuenta"
-            className="mt-1 block w-full border-red-300 rounded-md shadow-sm focus:ring-red-500 focus:border-red-500 sm:text-sm"
+            className="mt-1 block w-full text-black  border-red-300 rounded-md shadow-sm focus:ring-black focus:border-black sm:text-sm"
           />
         </label>
         <label className="block">
@@ -85,7 +85,7 @@ const LibroDiarioMayor = () => {
             value={newTransaccion.debe}
             onChange={handleChange}
             placeholder="Debe"
-            className="mt-1 block w-full border-red-300 rounded-md shadow-sm focus:ring-red-500 focus:border-red-500 sm:text-sm"
+            className="mt-1 block w-full text-black  border-red-300 rounded-md shadow-sm focus:ring-black focus:border-black sm:text-sm"
           />
         </label>
         <label className="block">
@@ -96,7 +96,7 @@ const LibroDiarioMayor = () => {
             value={newTransaccion.haber}
             onChange={handleChange}
             placeholder="Haber"
-            className="mt-1 block w-full border-red-300 rounded-md shadow-sm focus:ring-red-500 focus:border-red-500 sm:text-sm"
+            className="mt-1 block w-full text-black  border-red-300 rounded-md shadow-sm focus:ring-black focus:border-black sm:text-sm"
           />
         </label>
         <button
