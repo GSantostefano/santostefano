@@ -10,6 +10,8 @@ const ClientesCRUD = () => {
     email: "",
     dni: "",
     notas: "",
+    ciudad: "",   // Nuevo campo
+  provincia: ""
   });
   const [editingIndex, setEditingIndex] = useState(-1); // Para controlar la edición de un cliente existente
 
@@ -41,6 +43,8 @@ const ClientesCRUD = () => {
         email: "",
         dni: "",
         notas: "",
+        ciudad: "",   // Nuevo campo
+  provincia: ""
       }); // Limpiar formulario
     } else {
       alert("Nombre, dirección y teléfono son campos obligatorios.");
@@ -60,7 +64,7 @@ const ClientesCRUD = () => {
   return (
     <div className="container mx-auto p-4">
       
-      <h1 className=" text-2xl font-bold mb-4">Administrador de Clientes</h1>
+      <h1 className=" text-2xl font-bold mb-4">Gestión  de Clientes</h1>
       <div className="mb-4 text-red-600 grid grid-cols-1 sm:grid-cols-2 gap-4">
         <label className="block">
           <span className="">Nombre del cliente:</span>
@@ -85,13 +89,13 @@ const ClientesCRUD = () => {
           />
         </label>
         <label className="block">
-          <span className="">Dirección:</span>
+          <span className="">DNI:</span>
           <input
             type="text"
-            name="direccion"
-            value={newCliente.direccion}
+            name="dni"
+            value={newCliente.dni}
             onChange={handleChange}
-            placeholder="Dirección"
+            placeholder="DNI"
             className="mt-1 block w-full  border-red-300 rounded-md shadow-sm focus:ring-black focus:border-black sm:text-sm"
           />
         </label>
@@ -117,18 +121,41 @@ const ClientesCRUD = () => {
             className="mt-1 block w-full  border-red-300 rounded-md shadow-sm focus:ring-black focus:border-black sm:text-sm"
           />
         </label>
-        
         <label className="block">
-          <span className="">DNI:</span>
+          <span className="">Dirección:</span>
           <input
             type="text"
-            name="dni"
-            value={newCliente.dni}
+            name="direccion"
+            value={newCliente.direccion}
             onChange={handleChange}
-            placeholder="DNI"
+            placeholder="Dirección"
             className="mt-1 block w-full  border-red-300 rounded-md shadow-sm focus:ring-black focus:border-black sm:text-sm"
           />
         </label>
+        <label className="block">
+    <span className="">Ciudad:</span>
+    <input
+      type="text"
+      name="ciudad"
+      value={newCliente.ciudad}
+      onChange={handleChange}
+      placeholder="Ciudad"
+      className="mt-1 block w-full border-red-300 rounded-md shadow-sm focus:ring-black focus:border-black sm:text-sm"
+    />
+  </label>
+
+  <label className="block">
+    <span className="">Provincia:</span>
+    <input
+      type="text"
+      name="provincia"
+      value={newCliente.provincia}
+      onChange={handleChange}
+      placeholder="Provincia"
+      className="mt-1 block w-full border-red-300 rounded-md shadow-sm focus:ring-black focus:border-black sm:text-sm"
+    />
+  </label>
+       
         <label className="block">
           <span className="">Notas:</span>
           <input
@@ -167,9 +194,7 @@ const ClientesCRUD = () => {
               <th className="border border-black p-2 align-middle min-w-[100px] max-w-[200px] overflow-x-auto whitespace-nowrap">
                 Apellido
               </th>
-              <th className="border border-black p-2 align-middle min-w-[100px] max-w-[200px] overflow-x-auto whitespace-nowrap">
-                Dirección
-              </th>
+              
               <th className="border border-black p-2 align-middle min-w-[100px] max-w-[200px] overflow-x-auto whitespace-nowrap">
                 Teléfono
               </th>
@@ -179,6 +204,15 @@ const ClientesCRUD = () => {
               <th className="border border-black p-2 align-middle min-w-[100px] max-w-[200px] overflow-x-auto whitespace-nowrap">
                 DNI
               </th>
+              <th className="border border-black p-2 align-middle min-w-[100px] max-w-[200px] overflow-x-auto whitespace-nowrap">
+                Dirección
+              </th>
+              <th className="border border-black p-2 align-middle min-w-[100px] max-w-[200px] overflow-x-auto whitespace-nowrap">
+        Ciudad
+      </th>
+      <th className="border border-black p-2 align-middle min-w-[100px] max-w-[200px] overflow-x-auto whitespace-nowrap">
+        Provincia
+      </th>
               <th className="border border-black p-2 align-middle min-w-[100px] max-w-[200px] overflow-x-auto whitespace-nowrap">
                 Notas
               </th>
@@ -199,9 +233,7 @@ const ClientesCRUD = () => {
                 <td className="border border-black p-2 align-middle min-w-[100px] max-w-[200px] overflow-x-auto whitespace-nowrap">
                   {cliente.apellido}
                 </td>
-                <td className="border border-black p-2 align-middle min-w-[100px] max-w-[200px] overflow-x-auto whitespace-nowrap">
-                  {cliente.direccion}
-                </td>
+                
                 <td className="border border-black p-2 align-middle min-w-[100px] max-w-[200px] overflow-x-auto whitespace-nowrap">
                   {cliente.telefono}
                 </td>
@@ -211,6 +243,18 @@ const ClientesCRUD = () => {
                 <td className="border border-black p-2 align-middle min-w-[100px] max-w-[200px] overflow-x-auto whitespace-nowrap">
                   {cliente.dni}
                 </td>
+                <td className="border border-black p-2 align-middle min-w-[100px] max-w-[200px] overflow-x-auto whitespace-nowrap">
+                  {cliente.direccion}
+                </td>
+
+
+
+                <td className="border border-black p-2 align-middle min-w-[100px] max-w-[200px] overflow-x-auto whitespace-nowrap">
+          {cliente.ciudad}
+        </td>
+        <td className="border border-black p-2 align-middle min-w-[100px] max-w-[200px] overflow-x-auto whitespace-nowrap">
+          {cliente.provincia}
+        </td>
                 <td className="border border-black p-2 align-middle min-w-[100px] max-w-[200px] overflow-x-auto whitespace-nowrap">
                   {cliente.notas}
                 </td>

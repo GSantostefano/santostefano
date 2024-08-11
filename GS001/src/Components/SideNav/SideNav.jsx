@@ -8,6 +8,18 @@ const Sidenav = ({ visibleComponent, onClick }) => {
         <li>
             <button
               className={`relative transition-colors duration-300 transform transition-transform ${
+                visibleComponent === "ProveedoresCRUD"
+                  ? activeStyle
+                  : "hover:text-red-600 hover:scale-105 hover:after:scale-x-100 after:scale-x-0 after:transition-transform after:duration-300 after:ease-in-out after:absolute after:bottom-0 after:left-0 after:w-full after:h-0.5 after:bg-red-600"
+              }`}
+              onClick={() => onClick("ProveedoresCRUD")}
+            >
+              Proveedores
+            </button>
+          </li>
+        <li>
+            <button
+              className={`relative transition-colors duration-300 transform transition-transform ${
                 visibleComponent === "ClientesCRUD.jsx"
                   ? activeStyle
                   : "hover:text-red-600 hover:scale-105 hover:after:scale-x-100 after:scale-x-0 after:transition-transform after:duration-300 after:ease-in-out after:absolute after:bottom-0 after:left-0 after:w-full after:h-0.5 after:bg-red-600"
@@ -17,7 +29,8 @@ const Sidenav = ({ visibleComponent, onClick }) => {
               Clientes
             </button>
           </li>
-        <li>
+          
+        {/* <li>
             <button
               className={`relative transition-colors duration-300 transform transition-transform ${
                 visibleComponent === "CuentasCRUD"
@@ -28,7 +41,7 @@ const Sidenav = ({ visibleComponent, onClick }) => {
             >
             Cuentas
             </button>
-          </li>
+          </li> */}
           {/* <li>
             <button
               className={`relative transition-colors duration-300 transform transition-transform ${
@@ -41,7 +54,7 @@ const Sidenav = ({ visibleComponent, onClick }) => {
               Libro Diario
             </button>
           </li> */}
-          <li>
+          {/* <li>
             <button
               className={`relative transition-colors duration-300 transform transition-transform ${
                 visibleComponent === "LibroDiarioMayor"
@@ -52,7 +65,7 @@ const Sidenav = ({ visibleComponent, onClick }) => {
             >
               LibroDiarioMayor
             </button>
-          </li>
+          </li> */}
            <li>
             <button
               className={`relative transition-colors duration-300 transform transition-transform ${
@@ -65,18 +78,7 @@ const Sidenav = ({ visibleComponent, onClick }) => {
               Inventario
             </button>
           </li>
-          <li>
-            <button
-              className={`relative transition-colors duration-300 transform transition-transform ${
-                visibleComponent === "ProveedoresCRUD"
-                  ? activeStyle
-                  : "hover:text-red-600 hover:scale-105 hover:after:scale-x-100 after:scale-x-0 after:transition-transform after:duration-300 after:ease-in-out after:absolute after:bottom-0 after:left-0 after:w-full after:h-0.5 after:bg-red-600"
-              }`}
-              onClick={() => onClick("ProveedoresCRUD")}
-            >
-              Proveedores
-            </button>
-          </li>
+{/*           
           
           
 
@@ -117,7 +119,7 @@ const Sidenav = ({ visibleComponent, onClick }) => {
             >
               GestionCompras
             </button>
-          </li>
+          </li> */}
           {/* <li>
             <button
               className={`relative transition-colors duration-300 transform transition-transform ${

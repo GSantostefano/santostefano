@@ -46,7 +46,7 @@ const CuentasCRUD = () => {
 
   return (
     <div className="container mx-auto p-4">
-      <h1 className="text-2xl font-bold mb-4">Administrador de Cuentas</h1>
+      <h1 className="text-2xl font-bold mb-4">Gestión de Cuentas</h1>
       <div className="mb-4 text-red-600 grid w-4/12 gap-4">
         <label className="block">
           <span className="">Nombre de la cuenta:</span>
