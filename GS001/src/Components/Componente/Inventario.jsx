@@ -102,10 +102,10 @@ const Inventario = () => {
             onChange={handleChange}
             className="mt-1 block w-full text-black  border-red-300 rounded-md shadow-sm focus:ring-black focus:border-black sm:text-sm"
           >
-            <option value="Alimento">Alimento</option>
-            <option value="Juguete">Juguete</option>
-            <option value="Accesorio">Accesorio</option>
-            <option value="Medicamento">Medicamento</option>
+            <option value="Alimento">Jabon</option>
+            <option value="Juguete">Vela</option>
+            <option value="Accesorio">Sahumerio</option>
+            
           </select>
         </label>
         <label className="block">
