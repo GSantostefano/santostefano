@@ -46,6 +46,7 @@ const NavBar = () => {
         </li>
 
       </ul>
+      <div className="flex items-center border-t  border-red-600 w-3/4 mb-5"></div>
     </nav>
   );
 };
