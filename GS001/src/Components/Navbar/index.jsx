@@ -4,7 +4,8 @@ const NavBar = () => {
   const activeStyle = "text-red-600 underline underline-offset-4";
 
   return (
-    <nav className="flex items-center justify-between fixed z-10 text-white w-full top-0 py-5 px-8 text-sm font-ligth">
+    
+    <nav className="flex items-center justify-between bg-black fixed z-10 text-white w-full top-0 py-5 px-8 text-sm font-ligth border-b  border-red-600 ">
       <ul className="flex items-center gap-3 ">
         <li className="text-2xl">
           <NavLink
@@ -46,8 +47,9 @@ const NavBar = () => {
         </li>
 
       </ul>
-      <div className="flex items-center border-t  border-red-600 w-3/4 mb-5"></div>
+      
     </nav>
+
   );
 };
 export default NavBar;
