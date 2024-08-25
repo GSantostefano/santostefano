@@ -10,7 +10,7 @@ const NavBar = () => {
           <NavLink
             to="/"
           >
-          Яom Amoяa
+          ЯomAmoЯa
           </NavLink>
         </li>
 
