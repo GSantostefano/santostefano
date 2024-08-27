@@ -1,12 +1,12 @@
 import Layout from '../../Components/Layout'
-import Card from '../../Components/Card';
-function Productos() {
+import Productos from '../../Components/Productos';
+function Productosa() {
   return (
     <Layout>
       Productos
-      <Card/>
+      <Productos/>
     </Layout>
   )
 }
 
-export default Productos
+export default Productosa

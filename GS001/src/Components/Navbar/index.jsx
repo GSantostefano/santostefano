@@ -11,7 +11,7 @@ const NavBar = () => {
           <NavLink
             to="/"
           >
-          ЯomAmoяa
+          Romamoяa
           </NavLink>
         </li>
 
@@ -24,7 +24,15 @@ const NavBar = () => {
             AboutMe
           </NavLink>
         </li>
-        
+        <li>
+          <NavLink
+            to="/productos"
+            className={({ isActive }) => 
+                `relative transition-colors duration-300 transform transition-transform ${isActive ? activeStyle : "hover:text-red-600 hover:scale-105 hover:after:scale-x-100 after:scale-x-0 after:transition-transform after:duration-300 after:ease-in-out after:absolute after:bottom-0 after:left-0 after:w-full after:h-0.5 after:bg-red-600"}`}
+            >
+            Productos
+          </NavLink>
+        </li>
         <li>
           <NavLink
             to="/contacto"
