@@ -3,7 +3,6 @@ import Productos from '../../Components/Productos';
 function Productosa() {
   return (
     <Layout>
-      Productos
       <Productos/>
     </Layout>
   )
