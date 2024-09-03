@@ -24,7 +24,7 @@ function Home() {
   return (
     <Layout>
       <SideNav visibleComponent={visibleComponent} onClick={handleClick} />
-      <div className='flex flex-col text-black items-center text-pretty  w-8/12'>
+      <div className='flex flex-col items-center text-pretty  w-8/12'>
         {visibleComponent === 'Libro Diario' && <Preflop />}
         {visibleComponent === 'ControlStock' && <ControlStock />}
         {visibleComponent === 'LibroDiario' && <LibroDiario/>}

@@ -25,7 +25,7 @@ const Footer = () => {
         </a>
       </div>
       <div className="text-[10px]">
-        Creado por Santostefano S.A.S
+        Creado por | Santostefano S.A.S |
       </div>
     </footer>
   );

@@ -8,9 +8,9 @@ const NavBar = () => {
       <ul className="flex items-center gap-3">
         <li className="">
         <NavLink to="/">
-    <div className="text-2xl flex flex-col items-center">
+    <div className="text-4xl flex flex-col items-center">
       Gabriel
-      <span className="-mt-5 text-[8px] font-light">Jabones Únicos</span>
+      <span className="-mt-5 text-[8px] font-light">Aromas Únicos</span>
     </div>
   </NavLink>
         </li>
@@ -58,6 +58,15 @@ const NavBar = () => {
                 `relative transition-colors duration-300 transform transition-transform ${isActive ? activeStyle : "hover:text-yellow-600 hover:scale-105 hover:after:scale-x-100 after:scale-x-0 after:transition-transform after:duration-300 after:ease-in-out after:absolute after:bottom-0 after:left-0 after:w-full after:h-0.5 after:bg-yellow-600"}`}
             >
             | Deco Concreto |
+          </NavLink>
+        </li>
+        <li>
+          <NavLink
+            to="/promociones"
+            className={({ isActive }) => 
+                `relative transition-colors duration-300 transform transition-transform ${isActive ? activeStyle : "hover:text-yellow-600 hover:scale-105 hover:after:scale-x-100 after:scale-x-0 after:transition-transform after:duration-300 after:ease-in-out after:absolute after:bottom-0 after:left-0 after:w-full after:h-0.5 after:bg-yellow-600"}`}
+            >
+            | Promociones |
           </NavLink>
         </li>
       </ul>

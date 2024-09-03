@@ -7,6 +7,7 @@ import Productos from '../Productos';
 import NavBar from '../../Components/Navbar';
 import Perfil from '../Perfil';
 import Footer from '../../Components/Footer';
+import Preguntas from '../../Components/Componente/Preguntas';
 
 const AppRoutes = () => {
   let routes = useRoutes([
@@ -18,6 +19,7 @@ const AppRoutes = () => {
     { path: '/velas', element: <Productos /> },
     { path: '/sales-de-baño', element: <Productos /> },
     { path: '/deco-concreto', element: <Productos /> },
+    { path: '/preguntas', element: <Preguntas /> },
     { path: '/perfil', element: <Perfil /> },
     { path: '/*', element: <NotFound /> },
   ]);
