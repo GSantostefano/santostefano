@@ -14,6 +14,10 @@ const AppRoutes = () => {
     { path: '/aboutme', element: <AboutMe /> },
     { path: '/contacto', element: <Contacto /> },
     { path: '/productos', element: <Productos /> },
+    { path: '/jabones', element: <Productos /> },
+    { path: '/velas', element: <Productos /> },
+    { path: '/sales-de-baño', element: <Productos /> },
+    { path: '/deco-concreto', element: <Productos /> },
     { path: '/perfil', element: <Perfil /> },
     { path: '/*', element: <NotFound /> },
   ]);
@@ -23,7 +27,7 @@ const AppRoutes = () => {
 const App = () => {
   return (
     <BrowserRouter>
-      <div className="flex bg-stone-950  flex-col min-h-screen">
+      <div className="flex   flex-col min-h-screen">
         <NavBar />
         <main className="flex-grow">
           <AppRoutes />

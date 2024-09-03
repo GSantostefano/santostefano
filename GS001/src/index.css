@@ -10,9 +10,9 @@
     
   }
   
-  @font-face {
+  /* @font-face {
    font-family: 'robot';
-   src: url('./Components/Fonts/JMH Typewriter-Bold.otf') format('woff2');
+   src: url('./Components/Fonts/Prida01Light.') format('woff2');
   }
 
 @font-face {
@@ -20,7 +20,7 @@
   src: url('src/assets/fonts/GeistVariableVF.woff2') format('woff2');
   font-style: normal;
   font-weight: 100 900;
-}
+} */
 .custom-scrollbar::-webkit-scrollbar {
   height: 8px;
 }

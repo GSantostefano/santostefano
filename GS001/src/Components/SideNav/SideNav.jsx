@@ -1,5 +1,5 @@
 const Sidenav = ({ visibleComponent, onClick }) => {
-  const activeStyle = "text-red-600 underline underline-offset-4";
+  const activeStyle = "text-yellow-600 underline underline-offset-4";
 
   return (
     <div className="h-3/4 w-64  fixed left-0  flex items-center flex-col p-4">
@@ -10,7 +10,7 @@ const Sidenav = ({ visibleComponent, onClick }) => {
               className={`relative transition-colors duration-300 transform transition-transform ${
                 visibleComponent === "ProveedoresCRUD"
                   ? activeStyle
-                  : "hover:text-red-600 hover:scale-105 hover:after:scale-x-100 after:scale-x-0 after:transition-transform after:duration-300 after:ease-in-out after:absolute after:bottom-0 after:left-0 after:w-full after:h-0.5 after:bg-red-600"
+                  : "hover:text-yellow-600 hover:scale-105 hover:after:scale-x-100 after:scale-x-0 after:transition-transform after:duration-300 after:ease-in-out after:absolute after:bottom-0 after:left-0 after:w-full after:h-0.5 after:bg-yellow-600"
               }`}
               onClick={() => onClick("ProveedoresCRUD")}
             >
@@ -22,7 +22,7 @@ const Sidenav = ({ visibleComponent, onClick }) => {
               className={`relative transition-colors duration-300 transform transition-transform ${
                 visibleComponent === "ClientesCRUD.jsx"
                   ? activeStyle
-                  : "hover:text-red-600 hover:scale-105 hover:after:scale-x-100 after:scale-x-0 after:transition-transform after:duration-300 after:ease-in-out after:absolute after:bottom-0 after:left-0 after:w-full after:h-0.5 after:bg-red-600"
+                  : "hover:text-yellow-600 hover:scale-105 hover:after:scale-x-100 after:scale-x-0 after:transition-transform after:duration-300 after:ease-in-out after:absolute after:bottom-0 after:left-0 after:w-full after:h-0.5 after:bg-yellow-600"
               }`}
               onClick={() => onClick("ClientesCRUD.jsx")}
             >
@@ -35,7 +35,7 @@ const Sidenav = ({ visibleComponent, onClick }) => {
               className={`relative transition-colors duration-300 transform transition-transform ${
                 visibleComponent === "CuentasCRUD"
                   ? activeStyle
-                  : "hover:text-red-600 hover:scale-105 hover:after:scale-x-100 after:scale-x-0 after:transition-transform after:duration-300 after:ease-in-out after:absolute after:bottom-0 after:left-0 after:w-full after:h-0.5 after:bg-red-600"
+                  : "hover:text-yellow-600 hover:scale-105 hover:after:scale-x-100 after:scale-x-0 after:transition-transform after:duration-300 after:ease-in-out after:absolute after:bottom-0 after:left-0 after:w-full after:h-0.5 after:bg-yellow-600"
               }`}
               onClick={() => onClick("CuentasCRUD")}
             >
@@ -47,7 +47,7 @@ const Sidenav = ({ visibleComponent, onClick }) => {
               className={`relative transition-colors duration-300 transform transition-transform ${
                 visibleComponent === "LibroDiario"
                   ? activeStyle
-                  : "hover:text-red-600 hover:scale-105 hover:after:scale-x-100 after:scale-x-0 after:transition-transform after:duration-300 after:ease-in-out after:absolute after:bottom-0 after:left-0 after:w-full after:h-0.5 after:bg-red-600"
+                  : "hover:text-yellow-600 hover:scale-105 hover:after:scale-x-100 after:scale-x-0 after:transition-transform after:duration-300 after:ease-in-out after:absolute after:bottom-0 after:left-0 after:w-full after:h-0.5 after:bg-yellow-600"
               }`}
               onClick={() => onClick("LibroDiario")}
             >
@@ -59,7 +59,7 @@ const Sidenav = ({ visibleComponent, onClick }) => {
               className={`relative transition-colors duration-300 transform transition-transform ${
                 visibleComponent === "LibroDiarioMayor"
                   ? activeStyle
-                  : "hover:text-red-600 hover:scale-105 hover:after:scale-x-100 after:scale-x-0 after:transition-transform after:duration-300 after:ease-in-out after:absolute after:bottom-0 after:left-0 after:w-full after:h-0.5 after:bg-red-600"
+                  : "hover:text-yellow-600 hover:scale-105 hover:after:scale-x-100 after:scale-x-0 after:transition-transform after:duration-300 after:ease-in-out after:absolute after:bottom-0 after:left-0 after:w-full after:h-0.5 after:bg-yellow-600"
               }`}
               onClick={() => onClick("LibroDiarioMayor")}
             >
@@ -71,7 +71,7 @@ const Sidenav = ({ visibleComponent, onClick }) => {
               className={`relative transition-colors duration-300 transform transition-transform ${
                 visibleComponent === "Inventario"
                   ? activeStyle
-                  : "hover:text-red-600 hover:scale-105 hover:after:scale-x-100 after:scale-x-0 after:transition-transform after:duration-300 after:ease-in-out after:absolute after:bottom-0 after:left-0 after:w-full after:h-0.5 after:bg-red-600"
+                  : "hover:text-yellow-600 hover:scale-105 hover:after:scale-x-100 after:scale-x-0 after:transition-transform after:duration-300 after:ease-in-out after:absolute after:bottom-0 after:left-0 after:w-full after:h-0.5 after:bg-yellow-600"
               }`}
               onClick={() => onClick("Inventario")}
             >
@@ -87,7 +87,7 @@ const Sidenav = ({ visibleComponent, onClick }) => {
               className={`relative transition-colors duration-300 transform transition-transform ${
                 visibleComponent === "PedidosClientesCRUD"
                   ? activeStyle
-                  : "hover:text-red-600 hover:scale-105 hover:after:scale-x-100 after:scale-x-0 after:transition-transform after:duration-300 after:ease-in-out after:absolute after:bottom-0 after:left-0 after:w-full after:h-0.5 after:bg-red-600"
+                  : "hover:text-yellow-600 hover:scale-105 hover:after:scale-x-100 after:scale-x-0 after:transition-transform after:duration-300 after:ease-in-out after:absolute after:bottom-0 after:left-0 after:w-full after:h-0.5 after:bg-yellow-600"
               }`}
               onClick={() => onClick("PedidosClientesCRUD")}
             >
@@ -100,7 +100,7 @@ const Sidenav = ({ visibleComponent, onClick }) => {
               className={`relative transition-colors duration-300 transform transition-transform ${
                 visibleComponent === "ControlStock"
                   ? activeStyle
-                  : "hover:text-red-600 hover:scale-105 hover:after:scale-x-100 after:scale-x-0 after:transition-transform after:duration-300 after:ease-in-out after:absolute after:bottom-0 after:left-0 after:w-full after:h-0.5 after:bg-red-600"
+                  : "hover:text-yellow-600 hover:scale-105 hover:after:scale-x-100 after:scale-x-0 after:transition-transform after:duration-300 after:ease-in-out after:absolute after:bottom-0 after:left-0 after:w-full after:h-0.5 after:bg-yellow-600"
               }`}
               onClick={() => onClick("ControlStock")}
             >
@@ -113,7 +113,7 @@ const Sidenav = ({ visibleComponent, onClick }) => {
               className={`relative transition-colors duration-300 transform transition-transform ${
                 visibleComponent === "GestionCompras"
                   ? activeStyle
-                  : "hover:text-red-600 hover:scale-105 hover:after:scale-x-100 after:scale-x-0 after:transition-transform after:duration-300 after:ease-in-out after:absolute after:bottom-0 after:left-0 after:w-full after:h-0.5 after:bg-red-600"
+                  : "hover:text-yellow-600 hover:scale-105 hover:after:scale-x-100 after:scale-x-0 after:transition-transform after:duration-300 after:ease-in-out after:absolute after:bottom-0 after:left-0 after:w-full after:h-0.5 after:bg-yellow-600"
               }`}
               onClick={() => onClick("GestionCompras")}
             >
@@ -125,7 +125,7 @@ const Sidenav = ({ visibleComponent, onClick }) => {
               className={`relative transition-colors duration-300 transform transition-transform ${
                 visibleComponent === "GestionCompras"
                   ? activeStyle
-                  : "hover:text-red-600 hover:scale-105 hover:after:scale-x-100 after:scale-x-0 after:transition-transform after:duration-300 after:ease-in-out after:absolute after:bottom-0 after:left-0 after:w-full after:h-0.5 after:bg-red-600"
+                  : "hover:text-yellow-600 hover:scale-105 hover:after:scale-x-100 after:scale-x-0 after:transition-transform after:duration-300 after:ease-in-out after:absolute after:bottom-0 after:left-0 after:w-full after:h-0.5 after:bg-yellow-600"
               }`}
               onClick={() =>
                 window.open(

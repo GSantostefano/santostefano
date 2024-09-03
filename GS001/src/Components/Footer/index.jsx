@@ -6,9 +6,9 @@ const Footer = () => {
   const activeStyle = "text-red-600 underline underline-offset-4";
 
   return (
-    <footer className="flex text-white flex-col items-center w-full py-5 px-8 text-sm  bg-stone-950">
+    <footer className="flex text-black flex-col items-center w-full py-5 px-8 text-sm  ">
       <div className="w-full flex justify-center mb-4">
-        <div className="border-t border-red-600 w-3/4"></div>
+        <div className="border-t border-black w-3/4"></div>
       </div>
       <div className="flex space-x-4 mb-4">
         <a href="https://github.com/GSantostefano" target="_blank" rel="noopener noreferrer" className="">
@@ -24,8 +24,8 @@ const Footer = () => {
           <FontAwesomeIcon icon={faWhatsapp} size="2x" />
         </a>
       </div>
-      <div>
-        Creado por R3C01L
+      <div className="text-[10px]">
+        Creado por Santostefano S.A.S
       </div>
     </footer>
   );
