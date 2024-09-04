@@ -14,14 +14,16 @@ function Home() {
       />
 
       <div
-        className="text-9xl flex flex-col items-center text-white relative z-2"
+        className="text-7xl sm:text-6xl md:text-7xl lg:text-8xl xl:text-9xl flex flex-col items-center text-white relative z-2"
         style={{
-          fontFamily: "'Playfair Display', serif", // Aquí se aplica la fuente
+          fontFamily: "'Playfair Display', serif",
           filter: 'drop-shadow(2px 2px 2px rgba(0, 0, 0, 0.8))',
         }}
       >
         Gabriel
-        <span className="text-3xl -mt-4 font-light">Aromas Únicos</span>
+        <span className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-light -mt-2 md:-mt-3">
+          Aromas Únicos
+        </span>
       </div>
     </div>
   );

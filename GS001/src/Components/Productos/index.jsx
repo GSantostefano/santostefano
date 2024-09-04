@@ -45,14 +45,14 @@ const Componente = () => {
         />
 
        <div
-  className="mt-20 md:mt-32 lg:mt-40 flex flex-col items-center text-white relative z-2"
+  className="mt-40 md:mt-40 lg:mt-40 flex flex-col items-center text-white relative z-2"
   style={{
     fontFamily: "'Playfair Display', serif",
     filter: "drop-shadow(2px 2px 2px rgba(0, 0, 0, 0.8))",
   }}
 >
   <h1
-    className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl xl:text-9xl"
+    className="text-6xl sm:text-6xl md:text-7xl lg:text-8xl xl:text-9xl"
     style={{
       fontFamily: "'Playfair Display', serif",
     }}
