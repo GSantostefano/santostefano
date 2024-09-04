@@ -44,16 +44,25 @@ const Componente = () => {
           }}
         />
 
-        <div
-          className="text-9xl mt-40 flex flex-col items-center text-white relative z-2 "
-          style={{
-            fontFamily: "'Playfair Display', serif", // Aquí se aplica la fuente
-            filter: "drop-shadow(2px 2px 2px rgba(0, 0, 0, 0.8))",
-          }}
-        >
-          Jabones
-          <span className="text-3xl  -mt-3 font-light">Artesanales</span>
-        </div>
+       <div
+  className="mt-20 md:mt-32 lg:mt-40 flex flex-col items-center text-white relative z-2"
+  style={{
+    fontFamily: "'Playfair Display', serif",
+    filter: "drop-shadow(2px 2px 2px rgba(0, 0, 0, 0.8))",
+  }}
+>
+  <h1
+    className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl xl:text-9xl"
+    style={{
+      fontFamily: "'Playfair Display', serif",
+    }}
+  >
+    Jabones
+  </h1>
+  <span className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-light -mt-2 md:-mt-3">
+    Artesanales
+  </span>
+</div>
         
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mt-16 relative z-2 overflow-y-auto h-[calc(75vh-12rem)] pr-6">
