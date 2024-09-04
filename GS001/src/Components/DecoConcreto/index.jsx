@@ -15,14 +15,16 @@ function DecoConcreto() {
       />
 
       <div
-        className="text-9xl  flex flex-col items-center text-white relative z-2"
+        className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl xl:text-9xl flex flex-col items-center text-white relative z-2 text-center"
         style={{
           fontFamily: "'Playfair Display', serif", // Aquí se aplica la fuente
           filter: 'drop-shadow(2px 2px 2px rgba(0, 0, 0, 0.8))',
         }}
       >
         Proximamente
-        <span className="text-3xl  -mt-4 font-light">Deco Concreto</span>
+        <span className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-light mt-2 sm:-mt-4">
+          Deco Concreto
+        </span>
       </div>
     </div>
   );

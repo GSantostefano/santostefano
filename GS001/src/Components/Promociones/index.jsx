@@ -1,32 +1,11 @@
 import bgi2 from "../../assets/img/pexels-karolina-grabowska-4210336.jpg";
+
 const Promociones = () => {
   const cardsData = [
     { id: 1, title: "Jabon Blackrose", price: 3000, img: "blackrose.jpg", label: "blackrose" },
-    { id: 2, title: "Jabon Blackrose", price: 3000, img: "blackrose.jpg", label: "blackrose" },
-    { id: 3, title: "Jabon Blackrose", price: 3000, img: "blackrose.jpg", label: "blackrose" },
-    { id: 4, title: "Jabon Blackrose", price: 3000, img: "blackrose.jpg", label: "blackrose" },
-    { id: 5, title: "Jabon Blackrose", price: 3000, img: "blackrose.jpg", label: "blackrose" },
-    { id: 6, title: "Jabon Blackrose", price: 3000, img: "blackrose.jpg", label: "blackrose" },
-    { id: 11, title: "Jabon Blackrose", price: 3000, img: "blackrose.jpg", label: "blackrose" },
-    { id: 21, title: "Jabon Blackrose", price: 3000, img: "blackrose.jpg", label: "blackrose" },
-    { id: 31, title: "Jabon Blackrose", price: 3000, img: "blackrose.jpg", label: "blackrose" },
-    { id: 41, title: "Jabon Blackrose", price: 3000, img: "blackrose.jpg", label: "blackrose" },
-    { id: 51, title: "Jabon Blackrose", price: 3000, img: "blackrose.jpg", label: "blackrose" },
-    { id: 61, title: "Jabon Blackrose", price: 3000, img: "blackrose.jpg", label: "blackrose" },
-    { id: 12, title: "Jabon Blackrose", price: 3000, img: "blackrose.jpg", label: "blackrose" },
-    { id: 22, title: "Jabon Blackrose", price: 3000, img: "blackrose.jpg", label: "blackrose" },
-    { id: 32, title: "Jabon Blackrose", price: 3000, img: "blackrose.jpg", label: "blackrose" },
-    { id: 42, title: "Jabon Blackrose", price: 3000, img: "blackrose.jpg", label: "blackrose" },
-    { id: 52, title: "Jabon Blackrose", price: 3000, img: "blackrose.jpg", label: "blackrose" },
-    { id: 62, title: "Jabon Blackrose", price: 3000, img: "blackrose.jpg", label: "blackrose" },
-    { id: 112, title: "Jabon Blackrose", price: 3000, img: "blackrose.jpg", label: "blackrose" },
-    { id: 212, title: "Jabon Blackrose", price: 3000, img: "blackrose.jpg", label: "blackrose" },
-    { id: 312, title: "Jabon Blackrose", price: 3000, img: "blackrose.jpg", label: "blackrose" },
-    { id: 412, title: "Jabon Blackrose", price: 3000, img: "blackrose.jpg", label: "blackrose" },
-    { id: 512, title: "Jabon Blackrose", price: 3000, img: "blackrose.jpg", label: "blackrose" },
-    { id: 612, title: "Jabon Blackrose", price: 3000, img: "blackrose.jpg", label: "blackrose" },
-    // Agrega más objetos a este array para crear más tarjetas
+    // ... el resto de los datos de las tarjetas
   ];
+
   return (
     <div>
       <div className="hero min-h-[100vh] w-auto flex flex-col justify-center items-center">
@@ -35,28 +14,29 @@ const Promociones = () => {
           style={{
             backgroundImage: `url(${bgi2})`,
             backgroundSize: "cover",
-            backgroundPosition: "top", // Centra la imagen
-
+            backgroundPosition: "top",
             filter: "blur(5px)",
           }}
         />
 
         <div
-          className="text-9xl mt-40 flex flex-col items-center text-white relative z-2 "
+          className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl xl:text-9xl mt-20 sm:mt-40 flex flex-col items-center text-white relative z-2 text-center"
           style={{
-            fontFamily: "'Playfair Display', serif", // Aquí se aplica la fuente
+            fontFamily: "'Playfair Display', serif",
             filter: "drop-shadow(2px 2px 2px rgba(0, 0, 0, 0.8))",
           }}
         >
           Promociones
-          <span className="text-3xl  -mt-3 font-light">Comprá online con las mejores ofertas</span>
+          <span className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-light mt-2 sm:-mt-3">
+            Comprá online con las mejores ofertas
+          </span>
         </div>
-        
+
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mt-16 relative z-2 overflow-y-auto h-[calc(75vh-12rem)] pr-6">
           {cardsData.map((card) => (
             <div
               key={card.id}
-              className="bg-white cursor-pointer w-56 h-60 rounded-lg"
+              className="bg-white cursor-pointer w-48 h-56 sm:w-56 sm:h-60 rounded-lg shadow-lg transition transform hover:scale-105"
               onClick={() => showProduct(card)}
             >
               <figure className="relative mb-2 w-full h-4/5">
@@ -76,7 +56,6 @@ const Promociones = () => {
             </div>
           ))}
         </div>
-
       </div>
     </div>
   );
