@@ -53,7 +53,7 @@ const NavBar = () => {
               }`
             }
           >
-            | Jabones |
+          Jabones
           </NavLink>
         </li>
         <li>
@@ -67,7 +67,7 @@ const NavBar = () => {
               }`
             }
           >
-            | Velas |
+          Velas
           </NavLink>
         </li>
         <li>
@@ -81,7 +81,7 @@ const NavBar = () => {
               }`
             }
           >
-            | Sales de Baño |
+           Sales de Baño
           </NavLink>
         </li>
         <li>
@@ -95,7 +95,7 @@ const NavBar = () => {
               }`
             }
           >
-            | Deco Concreto |
+          Deco Concreto
           </NavLink>
         </li>
         <li>
@@ -109,7 +109,7 @@ const NavBar = () => {
               }`
             }
           >
-            | Promociones |
+          Promociones
           </NavLink>
         </li>
       </ul>
@@ -130,7 +130,7 @@ const NavBar = () => {
               }`
             }
           >
-            | Preguntas |
+          Preguntas
           </NavLink>
         </li>
         <li>
@@ -144,7 +144,7 @@ const NavBar = () => {
               }`
             }
           >
-            | Contacto |
+            Contacto
           </NavLink>
         </li>
         <li className="">
@@ -158,7 +158,7 @@ const NavBar = () => {
               }`
             }
           >
-            | Mi perfil |
+            Mi perfil
           </NavLink>
         </li>
       </ul>
