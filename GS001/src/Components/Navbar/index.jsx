@@ -4,11 +4,18 @@ const NavBar = () => {
   const activeStyle = "text-yellow-600 underline underline-offset-4";
 
   return  (
-    <nav className="flex items-center justify-between fixed bg-white z-10 text-black w-full top-0 py-5 px-8 text-sm font-light border-b border-black">
+    <nav className="flex items-center justify-between fixed bg-white z-10 text-black w-full top-0 py-5 px-8 text-sm font-light border-b border-black" style={{
+      fontFamily: "'Playfair Display', serif", // Aquí se aplica la fuente
+      filter: 'drop-shadow(2px 2px 2px rgba(0, 0, 0, 0.1))',
+    }}>
       <ul className="flex items-center gap-3">
         <li className="">
         <NavLink to="/">
-    <div className="text-4xl flex flex-col items-center">
+    <div className="text-4xl flex flex-col items-center"style={{
+          fontFamily: "'Playfair Display', serif", // Aquí se aplica la fuente
+          filter: 'drop-shadow(2px 2px 2px rgba(0, 0, 0, 0.1))',
+        }}>
+      
       Gabriel
       <span className="-mt-5 text-[8px] font-light">Aromas Únicos</span>
     </div>
