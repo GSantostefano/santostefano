@@ -24,7 +24,7 @@ const NavBar = () => {
                 filter: "drop-shadow(2px 2px 2px rgba(0, 0, 0, 0.1))",
               }}
             >
-              Gabriel
+              Sant.Gabriel
               <span className="-mt-5 text-[8px] font-light">Aromas Únicos</span>
             </div>
           </NavLink>

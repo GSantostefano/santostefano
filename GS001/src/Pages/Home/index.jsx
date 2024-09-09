@@ -20,7 +20,7 @@ function Home() {
           filter: 'drop-shadow(2px 2px 2px rgba(0, 0, 0, 0.8))',
         }}
       >
-        Gabriel
+        Sant.Gabriel
         <span className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-light -mt-2 md:-mt-3">
           Aromas Únicos
         </span>
