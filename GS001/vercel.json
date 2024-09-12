@@ -1,9 +1,9 @@
-// {
-//     "redirects": [
-//       {
-//         "source": "/",
-//         "destination": "https://romamora.com.ar",
-//         "permanent": true
-//       }
-//     ]
-//   }
+{
+  "redirects": [
+    {
+      "source": "/",
+      "destination": "https://romamora.com.ar",
+      "permanent": true
+    }
+  ]
+}
