@@ -18,7 +18,7 @@ const NavBar = () => {
       >
         {/* Sección izquierda */}
         <div className="flex items-center text-4xl">
-          <NavLink to="/">Andrea Pérez</NavLink>
+          <NavLink to="/">Gacho San</NavLink>
         </div>
 
         {/* Menú para escritorio - Sección central */}
