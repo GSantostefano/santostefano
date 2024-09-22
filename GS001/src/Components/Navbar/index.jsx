@@ -24,8 +24,8 @@ const NavBar = () => {
                 filter: "drop-shadow(2px 2px 2px rgba(0, 0, 0, 0.1))",
               }}
             >
-              SantoEstefano
-              <span className="-mt-5 text-[8px] font-light">Aromas celestiales</span>
+              Andrea Pérez
+              {/* <span className="-mt-5 text-[8px] font-light">Aromas celestiales</span> */}
             </div>
           </NavLink>
         </div>

@@ -1,3 +1,21 @@
+template
+
+Brand colors
+#171718
+#cbcbcb
+#a7a6a6
+#838182
+#5f5d5e
+
+
+
+
+
+
+
+
+
+
 # React + Vite
 hola!!
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.

@@ -20,10 +20,10 @@ function Home() {
           filter: 'drop-shadow(2px 2px 2px rgba(0, 0, 0, 0.8))',
         }}
       >
-        Rosanto
-        <span className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-light -mt-2 md:-mt-3">
-        Aromas Únicos
-        </span>
+        Andrea Pérez
+        {/* <span className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-light -mt-2 md:mt-5">
+        Aromas Fantasticos
+        </span> */}
       </div>
     </div>
   );
