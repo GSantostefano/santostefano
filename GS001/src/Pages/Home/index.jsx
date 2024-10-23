@@ -21,9 +21,7 @@ function Home() {
         }}
       >
         Royal Saints
-        {/* <span className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-light -mt-2 md:mt-5">
-        Aromas Fantasticos
-        </span> */}
+        
       </div>
     </div>
   );
